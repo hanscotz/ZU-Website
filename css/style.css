@@ -234,7 +234,7 @@
 
         .holderCircle {
             text-align: center;
-            padding: 20px;
+            padding: 50px;
             position: relative;
         }
         .dotCircle {
@@ -292,21 +292,94 @@
             display: block;
 
         }
-        .card {
+        .custom-card {
+            position: relative;
+            overflow: visible;
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding-top: 100px; /* Space for image */
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px; /* Adjust card size */
+            margin-top: 50px;
         }
-        .card img {
-            width: 100px;
+        
+        .image-container {
+            position: absolute;
+            top: -50px; /* Move image above the card */
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border-radius: 50%;
+            padding: 5px;
         }
+        
+        .image-container img {
+            width: 190px; /* Adjust image size */
+            height: 190px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(44, 44, 44, 0.1);
+        }
+        
+        .card-body {
+            padding: 60px 20px 20px; /* Ensure text is below image */
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .card-text {
+            font-size: 1rem;
+            color: #333;
+        }
+        
+        .read-more {
+            color: rgb(241, 19, 19);
+            font-weight: bold;
+        }
+        
+        .button-bottom {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        
         h1, h2, h3, h4, h5, h6 {
             margin: 0;
             font-family: 'montserratsemi_bold';
             
         }
-        .h2, h2 {
+        .h2, h2,h3 {
             font-size: 2rem;
-            color: #148131;
+            color: #083d16;
+            font-weight: bold;
+        }
+        .p{
+            color: black;
+            text-align: center;
+            font-family: 'montserratsemi_bold';
+            font-size: 20px;
+        }
+        .dotcircle{
+            background-color: #f8f9fa;
+        }
+        .white{
+            border-radius: 50px;
+            color: #f8f9fa;
+            margin: auto;
+        }
+        .par{
+            text-align: justify;
+            color: black;
+  
         }
