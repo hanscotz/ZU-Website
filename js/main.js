@@ -1,3 +1,20 @@
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        576: { items: 2 },
+        768: { items: 3 },
+        992: { items: 4 } // col-lg-3 = 4 per row
+      }
+    });
+});
+
+
 
     document.addEventListener("DOMContentLoaded", function () {
         let dots = document.querySelectorAll(".itemDot");
@@ -147,3 +164,43 @@
 })(jQuery);
 
 
+document.getElementById('subscribeForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById('mc-email').value;
+    const submitting = document.querySelector('.mailchimp-submitting');
+    const success = document.querySelector('.mailchimp-success');
+    const error = document.querySelector('.mailchimp-error');
+
+    submitting.style.display = 'block';
+    success.style.display = 'none';
+    error.style.display = 'none';
+
+    setTimeout(() => {
+        submitting.style.display = 'none';
+
+        if (email.includes('@')) {
+            success.style.display = 'block';
+        } else {
+            error.style.display = 'block';
+        }
+    }, 1500);
+});
+
+
+
+const swiper = new Swiper('.publications-swiper', {
+    slidesPerView: 4,   // Show 4 cards on large screens
+    spaceBetween: 30,    // Space between cards
+    loop: true,          // Infinite loop for the slider
+    autoplay: {
+      delay: 3000,       // Auto-slide every 3 seconds
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      320: { slidesPerView: 1 },     // 1 card on small screens
+      768: { slidesPerView: 2 },     // 2 cards on medium screens
+      1024: { slidesPerView: 3 },    // 3 cards on tablets
+      1200: { slidesPerView: 4 }     // 4 cards on large screens
+    }
+  });

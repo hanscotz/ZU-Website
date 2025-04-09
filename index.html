@@ -2,11 +2,36 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    
+    <!-- Optional: Animate.css for smooth fade-in -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+
     <meta charset="utf-8">
     <title>ZanzibarUniversity</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <!-- Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+<!-- jQuery (required) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick Carousel JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -497,6 +522,116 @@
             </div>
         </div>
 
+        <div class="container py-5">
+            <div class="text-center mb-4 text-success">
+                <h5 class="text-success"style="font-weight:bold;">ZU EVENTS</h5>
+                <h1 class="display-6 text-success">Explore Our Latest Events</h1>
+                <p>Here are our recent conferences, student workshops, and innovation expos.</p>
+            </div>
+        
+            <div class="owl-carousel owl-theme">
+        
+                <!-- Event 1 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/event1.jpg" class="card-img-top" alt="Event 1">
+                        <div class="card-body">
+                            <h5 class="card-title">International Conference</h5>
+                            <p class="card-text text-muted">Staff of Zanzibar University...</p>
+                            <a href="eventDetail?ev=85" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2024-12-16</div>
+                    </div>
+                </div>
+        
+                <!-- Repeat this block for 5 more events -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/event2.jpg" class="card-img-top" alt="Event 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Student Workshop</h5>
+                            <p class="card-text text-muted">Empowering students with research tools...</p>
+                            <a href="eventDetail?ev=86" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2024-12-20</div>
+                    </div>
+                </div>
+        
+                <!-- Event 3 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/event3.jpg" class="card-img-top" alt="Event 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Public Lecture</h5>
+                            <p class="card-text text-muted">Insightful topics by top scholars.</p>
+                            <a href="eventDetail?ev=87" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2024-12-25</div>
+                    </div>
+                </div>
+
+                 <!-- Event 4 -->
+                 <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/event4.jpg" class="card-img-top" alt="Event 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Public Lecture</h5>
+                            <p class="card-text text-muted">Insightful topics by top scholars.</p>
+                            <a href="eventDetail?ev=87" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2024-12-25</div>
+                    </div>
+                </div>
+
+                 <!-- Event 5 -->
+                 <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/event5.jpg" class="card-img-top" alt="Event 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Public Lecture</h5>
+                            <p class="card-text text-muted">Insightful topics by top scholars.</p>
+                            <a href="eventDetail?ev=87" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2024-12-25</div>
+                    </div>
+                </div>
+
+                 <!-- Event 6-->
+                 <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/event6.jpg" class="card-img-top" alt="Event 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Public Lecture</h5>
+                            <p class="card-text text-muted">Insightful topics by top scholars.</p>
+                            <a href="eventDetail?ev=87" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2024-12-25</div>
+                    </div>
+                </div>
+
+                 <!-- Event 7 -->
+                 <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/event1.jpg" class="card-img-top" alt="Event 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Public Lecture</h5>
+                            <p class="card-text text-muted">Insightful topics by top scholars.</p>
+                            <a href="eventDetail?ev=87" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2024-12-25</div>
+                    </div>
+                </div>
+        
+        
+        
+        
+        
+                <!-- Add 3 more events below similarly -->
+        
+            </div>
+            
+        </div>
+
         <!-- Counter Facts Start -->
         <div class="container-fluid counter-facts py-5">
             <div class="container py-5">
@@ -507,10 +642,10 @@
                                 <i class="fas fa-passport"></i>
                             </div>
                             <div class="counter-content">
-                                <h3>Facuties & Institute</h3>
+                                <h3>Faculties & Institutes</h3>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value text-black" data-toggle="counter-up">9</span>
-                                    <h4 class="text-success mb-0" style="font-weight: bolder; font-size: 25px;color: black;">+</h4>
+                                    <span class="counter-value" data-toggle="counter-up" style="font-weight: bold;">9</span>
+                                    <h4 class="text mb-0" style="font-weight: bolder; font-size: 15px;font-weight: bold;">+</h4>
                                 </div>
                             </div>
                         </div>
@@ -523,8 +658,8 @@
                             <div class="counter-content">
                                 <h3>Department</h3>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">18</span>
-                                    <h4 class="text-success mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
+                                    <span class="counter-value" data-toggle="counter-up"style="font-weight: bold;">18</span>
+                                    <h4 class="text mb-0" style="font-weight: bold; font-size: 15px;">+</h4>
                                 </div>
                             </div>
                         </div>
@@ -537,8 +672,8 @@
                             <div class="counter-content">
                                 <h3>Current Students</h3>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">4,206</span>
-                                    <h4 class="text-success mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
+                                    <span class="counter-value" data-toggle="counter-up"style="font-weight: bold;">4,206</span>
+                                    <h4 class="text mb-0" style="font-weight: bold; font-size: 15px;">+</h4>
                                 </div>
                             </div>
                         </div>
@@ -551,8 +686,8 @@
                             <div class="counter-content">
                                 <h3>Allumni</h3>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">11,488</span>
-                                    <h4 class="text-success mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
+                                    <span class="counter-value" data-toggle="counter-up"style="font-weight: bold;">11,488</span>
+                                    <h4 class="text mb-0" style="font-weight: bold; font-size: 15px;">+</h4>
                                 </div>
                             </div>
                         </div>
@@ -561,722 +696,220 @@
             </div>
         </div>
         <!-- Counter Facts End -->
+       
 
 
-        <!-- Services Start -->
-        <div class="container-fluid service overflow-hidden pt-5">
-            <div class="container py-5">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Visa Categories</h5>
+
+        <div class="container py-5">
+            <div class="text-center mb-4 text-success">
+                <h5 class="text-success" style="font-weight:bold;">ZU PUBLICATIONS</h5>
+                <h1 class="display-6 text-success">Explore Our Latest Publications</h1>
+                <p>Here are our recent academic papers, research, and publications.</p>
+            </div>
+        
+            <div class="owl-carousel owl-theme">
+        
+                <!-- Publication 1 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/pub.jpg" class="card-img-top" alt="Publication 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Research on Marine Biodiversity</h5>
+                            <p class="card-text text-muted">Author: Dr. John Doe</p>
+                            <p class="card-text text-muted">Date: January 10, 2025</p>
+                            <a href="publicationDetail?pub=101" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2025-01-10</div>
                     </div>
-                    <h1 class="display-5 mb-4">Enabling Your Immigration Successfully</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at
-                        atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime
-                        veniam necessitatibus saepe in ab? Repellat!</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item">
-                            <div class="service-inner">
-                                <div class="service-img">
-                                    <img src="img/service-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0">Job Visa</a>
-                                        </div>
-                                        <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
-                                            href="#">Explore More</a>
-                                    </div>
-                                    <div class="service-content pb-4">
-                                        <a href="#">
-                                            <h4 class="text-white mb-4 py-3">Job Visa</h4>
-                                        </a>
-                                        <div class="px-4">
-                                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                                Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum,
-                                                ratione aspernatur autem velit.</p>
-                                            <a class="btn btn-primary border-secondary rounded-pill py-3 px-5"
-                                                href="#">Explore More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        
+                <!-- Publication 2 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/pub.jpg" class="card-img-top" alt="Publication 2">
+                        <div class="card-body">
+                            <h5 class="card-title">AI in Agriculture: A New Era</h5>
+                            <p class="card-text text-muted">Author: Dr. Sarah Lee</p>
+                            <p class="card-text text-muted">Date: February 5, 2025</p>
+                            <a href="publicationDetail?pub=102" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2025-02-05</div>
+                    </div>
+                </div>
+        
+                <!-- Publication 3 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/pub.jpg" class="card-img-top" alt="Publication 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Youth Empowerment through Education</h5>
+                            <p class="card-text text-muted">Author: Prof. Michael Brown</p>
+                            <p class="card-text text-muted">Date: March 12, 2025</p>
+                            <a href="publicationDetail?pub=103" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2025-03-12</div>
+                    </div>
+                </div>
+        
+                <!-- Publication 4 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/pub.jpg" class="card-img-top" alt="Publication 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Transformation in Higher Education</h5>
+                            <p class="card-text text-muted">Author: Dr. Emily White</p>
+                            <p class="card-text text-muted">Date: April 8, 2025</p>
+                            <a href="publicationDetail?pub=104" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2025-04-08</div>
+                    </div>
+                </div>
+        
+                <!-- Publication 5 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/pub.jpg" class="card-img-top" alt="Publication 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Sustainable Campus Initiatives</h5>
+                            <p class="card-text text-muted">Author: Dr. Daniel Green</p>
+                            <p class="card-text text-muted">Date: May 5, 2025</p>
+                            <a href="publicationDetail?pub=105" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2025-05-05</div>
+                    </div>
+                </div>
+        
+                <!-- Publication 6 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/pub.jpg" class="card-img-top" alt="Publication 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Blockchain and Security</h5>
+                            <p class="card-text text-muted">Author: Dr. Alice Johnson</p>
+                            <p class="card-text text-muted">Date: June 1, 2025</p>
+                            <a href="publicationDetail?pub=106" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2025-06-01</div>
+                    </div>
+                </div>
+        
+                <!-- Publication 7 -->
+                <div class="item">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden">
+                        <img src="./img/pub.jpg" class="card-img-top" alt="Publication 7">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Ethics in Research</h5>
+                            <p class="card-text text-muted">Author: Dr. Brian Clark</p>
+                            <p class="card-text text-muted">Date: June 15, 2025</p>
+                            <a href="publicationDetail?pub=107" class="btn btn-sm btn-primary rounded-pill">Read More</a>
+                        </div>
+                        <div class="card-footer small text-muted">Uploaded: 2025-06-15</div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+      
+        <div class="newsletter-area newsletter-two" style="margin-bottom: 0;">
+            <div class="container" style="width: auto;">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="newsletter-content"> 
+                            <h3>Subscribe</h3>
+                            <h2>To Our Newsletter</h2>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item">
-                            <div class="service-inner">
-                                <div class="service-img">
-                                    <img src="img/service-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0">Business Visa</a>
-                                        </div>
-                                        <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
-                                            href="#">Explore More</a>
-                                    </div>
-                                    <div class="service-content pb-4">
-                                        <a href="#">
-                                            <h4 class="text-white mb-4 py-3">Business Visa</h4>
-                                        </a>
-                                        <div class="px-4">
-                                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                                Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum,
-                                                ratione aspernatur autem velit.</p>
-                                            <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5"
-                                                href="#">Explore More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item">
-                            <div class="service-inner">
-                                <div class="service-img">
-                                    <img src="img/service-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0">Diplometic Visa</a>
-                                        </div>
-                                        <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
-                                            href="#">Explore More</a>
-                                    </div>
-                                    <div class="service-content pb-4">
-                                        <a href="#">
-                                            <h4 class="text-white mb-4 py-3">Diplometic Visa</h4>
-                                        </a>
-                                        <div class="px-4">
-                                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                                Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum,
-                                                ratione aspernatur autem velit.</p>
-                                            <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5"
-                                                href="#">Explore More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item">
-                            <div class="service-inner">
-                                <div class="service-img">
-                                    <img src="img/service-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0">Students Visa</a>
-                                        </div>
-                                        <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
-                                            href="#">Explore More</a>
-                                    </div>
-                                    <div class="service-content pb-4">
-                                        <a href="#">
-                                            <h4 class="text-white mb-4 py-3">Students Visa</h4>
-                                        </a>
-                                        <div class="px-4">
-                                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                                Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum,
-                                                ratione aspernatur autem velit.</p>
-                                            <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5"
-                                                href="#">Explore More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item">
-                            <div class="service-inner">
-                                <div class="service-img">
-                                    <img src="img/service-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0">Residence Visa</a>
-                                        </div>
-                                        <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
-                                            href="#">Explore More</a>
-                                    </div>
-                                    <div class="service-content pb-4">
-                                        <a href="#">
-                                            <h4 class="text-white mb-4 py-3">Residence Visa</h4>
-                                        </a>
-                                        <div class="px-4">
-                                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                                Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum,
-                                                ratione aspernatur autem velit.</p>
-                                            <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5"
-                                                href="#">Explore More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item">
-                            <div class="service-inner">
-                                <div class="service-img">
-                                    <img src="img/service-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0">Tourist Visa</a>
-                                        </div>
-                                        <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
-                                            href="#">Explore More</a>
-                                    </div>
-                                    <div class="service-content pb-4">
-                                        <a href="#">
-                                            <h4 class="text-white mb-4 py-3">Tourist Visa</h4>
-                                        </a>
-                                        <div class="px-4">
-                                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                                Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum,
-                                                ratione aspernatur autem velit.</p>
-                                            <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5"
-                                                href="#">Explore More</a>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-lg-7 col-md-7">
+                        <div class="newsletter-form angle">
+                            <form id="subscribeForm">
+                                <div class="subscribe-form">
+                                    <input required id="mc-email" type="email" name="email" placeholder="Enter your email address...">
+                                    <button id="mc-submit" type="submit">SUBSCRIBE</button>
+                                </div>    
+                            </form>
+        
+                            <div class="mailchimp-alerts text-centre fix pull-right">
+                                <div class="mailchimp-submitting" style="display: none;">Submitting...</div>
+                                <div class="mailchimp-success" style="display: none;">Subscription successful! Thank you.</div>
+                                <div class="mailchimp-error" style="display: none;">Something went wrong. Please try again.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Services End -->
 
-
-
-        <!-- Features Start -->
-        <div class="container-fluid features overflow-hidden py-5">
+        <!-- footer -->
+        <div class="footer-widget-area" style="margin-top: 0;">
             <div class="container">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Why Choose Us</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Offer Tailor Made Services That Our Client Requires</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at
-                        atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime
-                        veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4 justify-content-center text-center">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item text-center p-4">
-                            <div class="feature-icon p-3 mb-4">
-                                <i class="fas fa-dollar-sign fa-4x text-primary"></i>
+                <div class="row">
+                    <!-- About Section -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo">
+                                <a href="index"><img src="./img/logo11.png" alt="Zanzibar University Logo"></a>
                             </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3">Cost-Effective</h5>
-                                <p class="mb-3">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum
-                                    accusamus,</p>
-                                <a class="btn btn-secondary rounded-pill" href="#">Read More<i
-                                        class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
+                            <p style="font-size:16px;font-weight:500">Center of Excellence, Spring of Knowledge and Virtue.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item text-center p-4">
-                            <div class="feature-icon p-3 mb-4">
-                                <i class="fab fa-cc-visa fa-4x text-primary"></i>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3">Visa Assistance</h5>
-                                <p class="mb-3">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum
-                                    accusamus,</p>
-                                <a class="btn btn-secondary rounded-pill" href="#">Read More<i
-                                        class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
+        
+                    <!-- Contact Section -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Get in Touch</h3>
+                            <a href="tel:+255772601303"><i class="fa fa-phone"></i> +255 772 601 303</a>
+                            <span><i class="fa fa-envelope"></i> info@zanvarsity.ac.tz</span>
+                            <span><i class="fa fa-globe"></i> www.zanvarsity.ac.tz</span>
+                            <span><i class="fa fa-map-marker-alt"></i> Tunguu - Zanzibar</span>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item text-center p-4">
-                            <div class="feature-icon p-3 mb-4">
-                                <i class="fas fa-atlas fa-4x text-primary"></i>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3">Faster Processing</h5>
-                                <p class="mb-3">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum
-                                    accusamus,</p>
-                                <a class="btn btn-secondary rounded-pill" href="#">Read More<i
-                                        class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
+        
+                    <!-- Useful Links -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Useful Links</h3>
+                            <ul class="footer-list">
+                                <li><a href="https://www.tcu.go.tz" target="_blank">Tanzania Commission for Universities</a></li>
+                                <li><a href="https://www.nactvet.go.tz/" target="_blank">National Council for Technical Education</a></li>
+                                <li><a href="https://www.heslb.go.tz/" target="_blank">Higher Education Student's Loans Board</a></li>
+                                <li><a href="https://zolas.zhelb.go.tz/zolas/login/auth" target="_blank">Zanzibar Higher Education Loans Board</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="feature-item text-center p-4">
-                            <div class="feature-icon p-3 mb-4">
-                                <i class="fas fa-users fa-4x text-primary"></i>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3">Direct Interviews</h5>
-                                <p class="mb-3">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum
-                                    accusamus,</p>
-                                <a class="btn btn-secondary rounded-pill" href="#">Read More<i
-                                        class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp"
-                            data-wow-delay="0.1s" href="#">More Features</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Features End -->
-
-
-
-        <!-- Countries We Offer Start -->
-        <div class="container-fluid country overflow-hidden py-5">
-            <div class="container">
-                <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 70px;">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">COUNTRIES WE OFFER</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Immigration & visa services following Countries</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at
-                        atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime
-                        veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4 text-center">
-                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="img/country-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="img/brazil.jpg" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4">Brazil</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="img/country-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="img/india.jpg" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4">india</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="img/country-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="img/usa.jpg" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4">New York</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="img/country-4.jpg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="img/italy.jpg" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4">Italy</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp"
-                            data-wow-delay="0.1s" href="#">More Countries</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Countries We Offer End -->
-
-
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial overflow-hidden pb-5">
-            <div class="container py-5">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">OUR CLIENTS RIVIEWS</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">What Our Clients Say</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at
-                        atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime
-                        veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="owl-carousel testimonial-carousel wow zoomInDown" data-wow-delay="0.2s">
-                    <div class="testimonial-item">
-                        <div class="testimonial-content p-4 mb-5">
-                            <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitati eiusmod tempor incididunt.
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" alt="img">
-                            </div>
-                            <div class="my-auto">
-                                <h5>Person Name</h5>
-                                <p class="mb-0">Profession</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-content p-4 mb-5">
-                            <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitati eiusmod tempor incididunt.
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" alt="img">
-                            </div>
-                            <div class="my-auto">
-                                <h5>Person Name</h5>
-                                <p class="mb-0">Profession</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-content p-4 mb-5">
-                            <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitati eiusmod tempor incididunt.
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" alt="img">
-                            </div>
-                            <div class="my-auto">
-                                <h5>Person Name</h5>
-                                <p class="mb-0">Profession</p>
+        
+                    <!-- Social Media -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Social Media</h3>
+                            <div class="social-icons">
+                                <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2"
+                        href="https://x.com/zanvarsity"><i class="fab fa-twitter fw-normal text-success"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                            class="fab fa-facebook-f fw-normal text-success"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                            class="fab fa-linkedin-in fw-normal text-success"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                            class="fab fa-instagram fw-normal text-success"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i
+                            class="fab fa-youtube fw-normal text-success"></i></a>
+                                <!-- <a href="https://www.facebook.com/zanzibaruniversityofficial/" target="_blank"><i class="zmdi zmdi-facebook"></i></a>
+                                <a href="https://twitter.com/zanvarsity" target="_blank"><i class="zmdi zmdi-twitter"></i></a>
+                                <a href="https://tz.linkedin.com/company/zanzibar-university-zu" target="_blank"><i class="zmdi zmdi-linkedin"></i></a>
+                                <a href="https://www.instagram.com/zanzibaruniversity.zu/" target="_blank"><i class="zmdi zmdi-instagram"></i></a> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
 
-
-
-        <!-- Training Start -->
-        <div class="container-fluid training overflow-hidden bg-light py-5">
-            <div class="container py-5">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">CHECK OUR TRAINING</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Get the Best Coacing Service Training with Our Travisa</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at
-                        atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime
-                        veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="training-item">
-                            <div class="training-inner">
-                                <img src="img/training-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="training-title-name">
-                                    <a href="#" class="h4 text-white mb-0">IELTS</a>
-                                    <a href="#" class="h4 text-white mb-0">Coaching</a>
-                                </div>
-                            </div>
-                            <div class="training-content bg-secondary rounded-bottom p-4">
-                                <a href="#">
-                                    <h4 class="text-white">IELTS Coaching</h4>
-                                </a>
-                                <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                                    veritatis.</p>
-                                <a class="btn btn-secondary rounded-pill text-white p-0" href="#">Read More <i
-                                        class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="training-item">
-                            <div class="training-inner">
-                                <img src="img/training-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="training-title-name">
-                                    <a href="#" class="h4 text-white mb-0">TOEFL</a>
-                                    <a href="#" class="h4 text-white mb-0">Coaching</a>
-                                </div>
-                            </div>
-                            <div class="training-content bg-secondary rounded-bottom p-4">
-                                <a href="#">
-                                    <h4 class="text-white">TOEFL Coaching</h4>
-                                </a>
-                                <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                                    veritatis.</p>
-                                <a class="btn btn-secondary rounded-pill text-white p-0" href="#">Read More <i
-                                        class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="training-item">
-                            <div class="training-inner">
-                                <img src="img/training-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="training-title-name">
-                                    <a href="#" class="h4 text-white mb-0">PTE</a>
-                                    <a href="#" class="h4 text-white mb-0">Coaching</a>
-                                </div>
-                            </div>
-                            <div class="training-content bg-secondary rounded-bottom p-4">
-                                <a href="#">
-                                    <h4 class="text-white">PTE Coaching</h4>
-                                </a>
-                                <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                                    veritatis.</p>
-                                <a class="btn btn-secondary rounded-pill text-white p-0" href="#">Read More <i
-                                        class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="training-item">
-                            <div class="training-inner">
-                                <img src="img/training-4.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="training-title-name">
-                                    <a href="#" class="h4 text-white mb-0">OET</a>
-                                    <a href="#" class="h4 text-white mb-0">Coaching</a>
-                                </div>
-                            </div>
-                            <div class="training-content bg-secondary rounded-bottom p-4">
-                                <a href="#">
-                                    <h4 class="text-white">OET Coaching</h4>
-                                </a>
-                                <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                                    veritatis.</p>
-                                <a class="btn btn-secondary rounded-pill text-white p-0" href="#">Read More <i
-                                        class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp"
-                            data-wow-delay="0.1s" href="#">View More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Training End -->
-
-
-        <!-- Contact Start -->
-        <div class="container-fluid contact overflow-hidden pb-5">
-            <div class="container py-5">
-                <div class="office pt-5">
-                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="sub-style">
-                            <h5 class="sub-title text-primary px-3">Worlwide Offices</h5>
-                        </div>
-                        <h1 class="display-5 mb-4">Explore Our Office Worldwide</h1>
-                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet
-                            at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas
-                            maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                    </div>
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="office-item p-4">
-                                <div class="office-img mb-4">
-                                    <img src="img/office-2.jpg" class="img-fluid w-100 rounded" alt="">
-                                </div>
-                                <div class="office-content d-flex flex-column">
-                                    <h4 class="mb-2">Australia</h4>
-                                    <a href="#" class="text-secondary fs-5 mb-2">+123.456.7890</a>
-                                    <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                    <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd
-                                        States of America.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="office-item p-4">
-                                <div class="office-img mb-4">
-                                    <img src="img/office-1.jpg" class="img-fluid w-100 rounded" alt="">
-                                </div>
-                                <div class="office-content d-flex flex-column">
-                                    <h4 class="mb-2">Canada</h4>
-                                    <a href="#" class="text-secondary fs-5 mb-2">(012) 0345 6789</a>
-                                    <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                    <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd
-                                        States of America.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="office-item p-4">
-                                <div class="office-img mb-4">
-                                    <img src="img/office-3.jpg" class="img-fluid w-100 rounded" alt="">
-                                </div>
-                                <div class="office-content d-flex flex-column">
-                                    <h4 class="mb-2">United Kingdom</h4>
-                                    <a href="#" class="text-secondary fs-5 mb-2">01234.567.890</a>
-                                    <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                    <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd
-                                        States of America.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                            <div class="office-item p-4">
-                                <div class="office-img mb-4">
-                                    <img src="img/office-4.jpg" class="img-fluid w-100 rounded" alt="">
-                                </div>
-                                <div class="office-content d-flex flex-column">
-                                    <h4 class="mb-2">India</h4>
-                                    <a href="#" class="text-secondary fs-5 mb-2">+123.45.67890</a>
-                                    <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                    <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd
-                                        States of America.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-secondary me-2"></i>
-                                <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Opening Time</h4>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Mon - Friday:</h6>
-                                <p class="text-white mb-0">09.00 am to 07.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Satday:</h6>
-                                <p class="text-white mb-0">10.00 am to 05.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Vacation:</h6>
-                                <p class="text-white mb-0">All Sunday is our vacation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Our Services</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Business</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Evaluation</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Migrate</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Study</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Counselling</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Work / Career</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <h4 class="text-secondary mb-4">Newsletter</h4>
-                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit.</p>
-                            <div class="position-relative mx-auto rounded-pill">
-                                <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text"
-                                    placeholder="Enter your email">
-                                <button type="button"
-                                    class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#" class="border-bottom text-white"><i
-                                    class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right
-                            reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
-                        Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End -->
+        <!-- Copyright Bar -->
+<div class="footer-bottom">
+    <div class="container text-center">
+        <p>© 2025 Zanzibar University. All rights reserved. | Designed by ICT Department</p>
+    </div>
+</div>
+  <!-- Copyright End -->
 
 
         <!-- Back to Top -->
