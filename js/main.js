@@ -204,3 +204,9 @@ const swiper = new Swiper('.publications-swiper', {
       1200: { slidesPerView: 4 }     // 4 cards on large screens
     }
   });
+
+ 
+        // Load Header and Footer
+        document.getElementById("container-header").innerHTML = fetch("header.html").then(res => res.text());
+       // document.getElementById("footer-container").innerHTML = fetch("partials/footer.html").then(res => res.text());
+    
