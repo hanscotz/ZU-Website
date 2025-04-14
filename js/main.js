@@ -205,8 +205,24 @@ const swiper = new Swiper('.publications-swiper', {
     }
   });
 
- 
-        // Load Header and Footer
-        document.getElementById("container-header").innerHTML = fetch("header.html").then(res => res.text());
-       // document.getElementById("footer-container").innerHTML = fetch("partials/footer.html").then(res => res.text());
-    
+
+  document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
+    element.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let submenu = this.nextElementSibling;
+        if (submenu) {
+            submenu.classList.toggle('show');
+        }
+    });
+});
+
+// Close submenus when clicking outside
+document.addEventListener('click', function (e) {
+    document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(function (submenu) {
+        submenu.classList.remove('show');
+    });
+});
+
+  
