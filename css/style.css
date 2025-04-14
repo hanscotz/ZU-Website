@@ -118,13 +118,13 @@
 
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
-    color: var(--bs-primary) !important;
+    color: #044e02;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--bs-secondary) !important;
-    background: var(--bs-primary);
+    color:white !important;
+    background: #044e02;
     border-radius: 5px;
     padding: 8px 12px;
 }
