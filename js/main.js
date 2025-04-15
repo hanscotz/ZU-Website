@@ -1,63 +1,63 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 20,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: { items: 1 },
-        576: { items: 2 },
-        768: { items: 3 },
-        992: { items: 4 } // col-lg-3 = 4 per row
-      }
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: { items: 1 },
+            576: { items: 2 },
+            768: { items: 3 },
+            992: { items: 4 } // col-lg-3 = 4 per row
+        }
     });
 });
 
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-        let dots = document.querySelectorAll(".itemDot");
-        let contents = document.querySelectorAll(".title-box");
-        let circle = document.querySelector(".dotCircle");
-        let currentIndex = 0;
-        let angleStep = 360 / dots.length;
+document.addEventListener("DOMContentLoaded", function () {
+    let dots = document.querySelectorAll(".itemDot");
+    let contents = document.querySelectorAll(".title-box");
+    let circle = document.querySelector(".dotCircle");
+    let currentIndex = 0;
+    let angleStep = 360 / dots.length;
 
-        function arrangeDots() {
-            dots.forEach((dot, index) => {
-                let angle = angleStep * index;
-                let x = 200 * Math.cos(angle * (Math.PI / 180)) + 170; // Adjusted for larger circle size
-                let y = 210 * Math.sin(angle * (Math.PI / 180)) + 170; // Adjusted for larger circle size
-                dot.style.transform = `translate(${x}px, ${y}px)`;
-            });
-        }
+    function arrangeDots() {
+        dots.forEach((dot, index) => {
+            let angle = angleStep * index;
+            let x = 200 * Math.cos(angle * (Math.PI / 180)) + 170; // Adjusted for larger circle size
+            let y = 210 * Math.sin(angle * (Math.PI / 180)) + 170; // Adjusted for larger circle size
+            dot.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    }
 
-        function rotateItems() {
-            circle.style.transform = `rotate(${angleStep * currentIndex}deg)`;
+    function rotateItems() {
+        circle.style.transform = `rotate(${angleStep * currentIndex}deg)`;
+        dots.forEach(d => d.classList.remove("active", "focused"));
+        contents.forEach(content => content.classList.remove("active"));
+        dots[currentIndex].classList.add("active", "focused");
+        contents[currentIndex].classList.add("active");
+        currentIndex = (currentIndex + 1) % dots.length;
+    }
+
+    arrangeDots();
+    setInterval(rotateItems, 2500);
+
+    dots.forEach(dot => {
+        dot.addEventListener("click", function () {
             dots.forEach(d => d.classList.remove("active", "focused"));
-            contents.forEach(content => content.classList.remove("active"));
-            dots[currentIndex].classList.add("active", "focused");
-            contents[currentIndex].classList.add("active");
-            currentIndex = (currentIndex + 1) % dots.length;
-        }
-        
-        arrangeDots();
-        setInterval(rotateItems, 2500);
-
-        dots.forEach(dot => {
-            dot.addEventListener("click", function () {
-                dots.forEach(d => d.classList.remove("active", "focused"));
-                this.classList.add("active", "focused");
-                let tab = this.getAttribute("data-tab");
-                contents.forEach(content => {
-                    content.classList.remove("active");
-                });
-                contents[tab - 1].classList.add("active");
-                currentIndex = tab - 1;
-                rotateItems();
+            this.classList.add("active", "focused");
+            let tab = this.getAttribute("data-tab");
+            contents.forEach(content => {
+                content.classList.remove("active");
             });
+            contents[tab - 1].classList.add("active");
+            currentIndex = tab - 1;
+            rotateItems();
         });
     });
+});
 (function ($) {
     "use strict";
 
@@ -70,8 +70,8 @@ $(document).ready(function(){
         }, 1);
     };
     spinner(0);
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -118,48 +118,48 @@ $(document).ready(function(){
         dots: false,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:1
+            576: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:2
+            992: {
+                items: 2
             },
-            1200:{
-                items:2
+            1200: {
+                items: 2
             }
         }
     });
 
-    
-    
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
+
+
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
 
-   
+
 
 })(jQuery);
 
@@ -194,19 +194,19 @@ const swiper = new Swiper('.publications-swiper', {
     spaceBetween: 30,    // Space between cards
     loop: true,          // Infinite loop for the slider
     autoplay: {
-      delay: 3000,       // Auto-slide every 3 seconds
-      disableOnInteraction: false
+        delay: 3000,       // Auto-slide every 3 seconds
+        disableOnInteraction: false
     },
     breakpoints: {
-      320: { slidesPerView: 1 },     // 1 card on small screens
-      768: { slidesPerView: 2 },     // 2 cards on medium screens
-      1024: { slidesPerView: 3 },    // 3 cards on tablets
-      1200: { slidesPerView: 4 }     // 4 cards on large screens
+        320: { slidesPerView: 1 },     // 1 card on small screens
+        768: { slidesPerView: 2 },     // 2 cards on medium screens
+        1024: { slidesPerView: 3 },    // 3 cards on tablets
+        1200: { slidesPerView: 4 }     // 4 cards on large screens
     }
-  });
+});
 
 
-  document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
+document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
     element.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -225,4 +225,9 @@ document.addEventListener('click', function (e) {
     });
 });
 
-  
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init(); // Initialize AOS
+});
+
