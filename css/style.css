@@ -368,6 +368,10 @@
             font-family: 'montserratsemi_bold';
             
         }
+
+        .pa{
+            text-align: justify;
+        }
         
         .h2, h2,h3,h4{
             font-size: 2rem;
@@ -913,7 +917,7 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: #007bff;
+    background-color: #208b44;
     color: white;
     line-height: 36px;
     text-align: center;
@@ -925,4 +929,39 @@
     background-color: #0056b3;
     transform: scale(1.1);
   }
+
   
+
+
+
+ 
+  .nav-pills .nav-link.active {
+    background-color: #015515 !important;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 0.375rem;
+  }
+
+  .nav-pills .nav-link {
+    color: #28a745;
+  }
+
+  .nav-pills .nav-link:hover {
+    color: #1c7430;
+  }
+
+  .tab-content {
+    padding-top: 15px;
+    
+  }
+  i{
+    color: #006331;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #darul{
+    height: auto;
+  }
