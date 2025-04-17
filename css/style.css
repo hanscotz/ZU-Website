@@ -788,8 +788,8 @@
   .icon-circle {
     width: 60px;
     height: 60px;
-    background-color: #006331;
-    color: #fff;
+    background-color: #f3fcf7;
+    color: #00812b;
     font-size: 24px;
     border-radius: 50%;
     display: flex;
@@ -964,4 +964,140 @@
 
   #darul{
     height: auto;
+  }
+
+
+  .council-board {
+    background: linear-gradient(135deg, #f3f8f7, #e0f7ef);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .board-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  
+  .board-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .board-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #28a745;
+  }
+  
+  .board-card h5 {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .board-card .role {
+    font-style: italic;
+    color: #28a745;
+    font-weight: 500;
+  }
+  
+  .board-card .qualifications {
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  @media (max-width: 576px) {
+    .board-img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+
+
+
+
+  .masonry-section {
+    padding: 60px 20px;
+    background: #dcecdf;
+  }
+
+  .masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  .officer-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    transition: transform 0.4s ease;
+  }
+
+  .officer-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+
+  .officer-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .officer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 25, 39, 0.7);
+    backdrop-filter: blur(6px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .officer-card:hover .officer-overlay {
+    opacity: 1;
+  }
+
+  .officer-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .officer-title {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-bottom: 15px;
+  }
+
+  .officer-icons a {
+    color: #105816;
+    font-size: 1.3rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  .officer-icons a:hover {
+    color: #edf1ef;
   }
