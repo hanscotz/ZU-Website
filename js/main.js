@@ -32,32 +32,46 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function rotateItems() {
-        circle.style.transform = `rotate(${angleStep * currentIndex}deg)`;
-        dots.forEach(d => d.classList.remove("active", "focused"));
-        contents.forEach(content => content.classList.remove("active"));
-        dots[currentIndex].classList.add("active", "focused");
-        contents[currentIndex].classList.add("active");
-        currentIndex = (currentIndex + 1) % dots.length;
-    }
-
-    arrangeDots();
-    setInterval(rotateItems, 2500);
-
-    dots.forEach(dot => {
-        dot.addEventListener("click", function () {
+    document.addEventListener("DOMContentLoaded", function () {
+        const circle = document.querySelector(".circle"); // or use an ID if available
+        const dots = document.querySelectorAll(".dot");
+        const contents = document.querySelectorAll(".tab-content");
+        let currentIndex = 0;
+        const angleStep = 360 / dots.length;
+    
+        function rotateItems() {
+            if (!circle || !dots.length || !contents.length) return;
+    
+            circle.style.transform = `rotate(${angleStep * currentIndex}deg)`;
             dots.forEach(d => d.classList.remove("active", "focused"));
-            this.classList.add("active", "focused");
-            let tab = this.getAttribute("data-tab");
-            contents.forEach(content => {
-                content.classList.remove("active");
+            contents.forEach(content => content.classList.remove("active"));
+            dots[currentIndex].classList.add("active", "focused");
+            contents[currentIndex].classList.add("active");
+            currentIndex = (currentIndex + 1) % dots.length;
+        }
+    
+        if (dots.length && contents.length && circle) {
+            arrangeDots(); // Make sure this is defined
+            setInterval(rotateItems, 2500);
+    
+            dots.forEach(dot => {
+                dot.addEventListener("click", function () {
+                    dots.forEach(d => d.classList.remove("active", "focused"));
+                    this.classList.add("active", "focused");
+                    let tab = this.getAttribute("data-tab");
+                    contents.forEach(content => content.classList.remove("active"));
+                    contents[tab - 1].classList.add("active");
+                    currentIndex = tab - 1;
+                    rotateItems();
+                });
             });
-            contents[tab - 1].classList.add("active");
-            currentIndex = tab - 1;
-            rotateItems();
-        });
+        } else {
+            console.warn("Required elements not found in DOM.");
+        }
     });
-});
+}
+);
+
 (function ($) {
     "use strict";
 
@@ -72,9 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
     spinner(0);
 
 
-    // Initiate the wowjs
-    new WOW().init();
-
+    $(document).ready(function() {
+        // Initialize WOW.js after the DOM is fully loaded
+        new WOW().init();
+      });
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -206,11 +221,20 @@ const swiper = new Swiper('.publications-swiper', {
 });
 
 
+// Toggle submenus on click
 document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
     element.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
+        // Close all other open submenus
+        document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(function (submenu) {
+            if (submenu !== element.nextElementSibling) {
+                submenu.classList.remove('show');
+            }
+        });
+
+        // Toggle this submenu
         let submenu = this.nextElementSibling;
         if (submenu) {
             submenu.classList.toggle('show');
@@ -224,6 +248,7 @@ document.addEventListener('click', function (e) {
         submenu.classList.remove('show');
     });
 });
+
 
 
 
