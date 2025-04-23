@@ -1101,3 +1101,80 @@
   .officer-icons a:hover {
     color: #edf1ef;
   }
+
+
+  /* senate style*/
+  .senate-container {
+    padding: 50px 15px;
+  
+  }
+
+  .senate-member {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .senate-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .senate-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #163d2e, #045541);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .senate-info h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: bold;
+  }
+
+  .senate-info p {
+    margin: 5px 0 0;
+    color: #6c757d;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 767.98px) {
+    .senate-number {
+      margin-bottom: 10px;
+    }
+  }
+
+
+  /*Admission style*/
+  @keyframes fade-in {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slide-in {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+  
+  .animate-slide-in {
+    animation: slide-in 1.2s ease-out;
+  }
+
+
+
