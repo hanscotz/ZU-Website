@@ -238,6 +238,7 @@
             text-align: center;
             padding: 50px;
             position: relative;
+            
         }
         .dotCircle {
             position: relative;
@@ -277,13 +278,13 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 200px; /* Increased size */
-            height: 200px; /* Increased size */
+            width: 150px; /* Increased size */
+            height: 150px; /* Increased size */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 18px; /* Adjusted font size */
+            font-size: 5px; /* Adjusted font size */
             padding: 5px; /* Adjusted padding */
         }
         .title-box {

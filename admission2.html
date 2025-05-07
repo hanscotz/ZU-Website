@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Billing Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/admission2.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- Optional: Animate.css for smooth fade-in -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+  <meta charset="utf-8">
+  <title>Zanzibar University</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <!-- jQuery (required) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+<header>
+  <style>
+      :root {
+  --bs-primary: #206e32; /* Green */
+  --bs-secondary: #ffffff; /* White */
+  --bs-white: #ffffff;
+  --bs-light: #f8f9fa; /* Light gray for better contrast */
+  --bs-dark: 	#013220; /* Dark green */
+}
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*** Back to Top Button ***/
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 99;
+}
+
+.back-to-top:hover {
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+}
+
+/*** Buttons ***/
+.btn {
+  font-weight: 600;
+  transition: .5s;
+}
+
+.btn-primary {
+  background: var(--bs-primary) !important;
+  color: var(--bs-white) !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  transition: 0.5s;
+  border: 1px solid var(--bs-dark);
+}
+
+.btn-primary:hover {
+  background: var(--bs-dark) !important;
+  color: var(--bs-white);
+  border: 1px solid var(--bs-dark);
+}
+
+.btn-secondary {
+  background: var(--bs-white);
+  color: var(--bs-primary);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  border: 1px solid var(--bs-primary);
+  transition: 0.5s;
+}
+
+.btn-secondary:hover {
+  background: var(--bs-primary);
+  color: var(--bs-white) !important;
+}
+
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: #044e02;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color:white !important;
+  background: #044e02;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+/*** Hero Header ***/
+.bg-breadcrumb {
+  background: url(../img/zu.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 60px 0;}
+
+
+  .newsletter-area {
+    background: #0d684d;
+    padding: 60px 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 0px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin: 0px;
+}
+
+.newsletter-content h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.newsletter-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.newsletter-form {
+    text-align: right;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    max-width: 320px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: background 0.3s;
+}
+
+.subscribe-form input[type="email"]::placeholder {
+    color: #ddd;
+}
+
+.subscribe-form input[type="email"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+
+.subscribe-form button {
+    background-color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #dd0e0e;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(255, 193, 7, 0.3);
+}
+
+.subscribe-form button:hover {
+    background-color: #ffca28;
+    color: white;
+    box-shadow: 0 6px 18px rgba(255, 193, 7, 0.5);
+}
+
+.mailchimp-alerts {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.mailchimp-submitting {
+    color: #ffc107;
+}
+
+.mailchimp-success {
+    color: white;
+}
+
+.mailchimp-error {
+    color: #f44336;
+}
+
+@media screen and (max-width: 768px) {
+    .subscribe-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter-form {
+        text-align: left;
+    }
+}
+
+.footer-widget-area {
+    background: linear-gradient(135deg, #42c492, #068554);
+    padding: 60px 0;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 0;
+}
+
+.single-footer-widget {
+    margin-bottom: 0px;
+}
+
+.footer-logo img {
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+    
+
+.single-footer-widget h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: 600;
+}
+
+.single-footer-widget h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: white;
+    margin-top: 8px;
+    border-radius: 3px;
+}
+
+.single-footer-widget a,
+.single-footer-widget span {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #ddd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.single-footer-widget a:hover {
+    color: #ffc107;
+    transform: translateX(5px);
+}
+
+.footer-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-list a {
+    font-weight: 500;
+    color: #ddd;
+}
+
+.footer-list a:hover {
+    color: #ffc107;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    color:white ;
+}
+
+.social-icons a {
+    background: #fffffe;
+    color: #3da51d;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #0b3f07;
+   
+    -webkit-text-fill-color: white;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .single-footer-widget {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+.footer-bottom {
+    background-color: #0d684d;
+    padding: 20px 0;
+    color: #ccc;
+    font-size: 15px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: white;
+}
+
+.footer-bottom p a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-bottom p a:hover {
+    color: #25d81f;
+    text-decoration: underline;
+}
+
+  
+
+.dropdown-menu :hover {
+  color: #006400 !important; /* dark green, or any color you prefer */
+  font-weight: bold !important;
+}
+
+
+/* Change color when clicked (active) */
+
+.dropdown-menu {
+  color: #003300 !important; /* even darker green or preferred color */
+  font-weight: bold !important;
+}
+
+/*smooth transition*/
+.navbar-nav .nav-link,
+.dropdown-menu .dropdown-item {
+  transition: color 0.3s ease;
+}
+
+
+
+/* Prevent menu from closing when clicking inside */
+.dropdown-menu .dropdown-item.dropdown-toggle:after {
+    content: " ▸";
+    float: right;
+}
+
+/* Hover dropdown for desktop */
+@media (min-width: 992px) {
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+      display: block;
+      margin-top: 0; /* remove delay */
+      color: rgb(128, 0, 38);
+    }
+  
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+      color: rgb(128, 0, 17);
+    }
+  
+    .dropdown-submenu {
+      position: relative;
+    }
+  
+    .dropdown-submenu .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-left: 0.1rem;
+    }
+  }
+
+  .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Let JS control visibility */
+    position: absolute; /* Needed for correct dropdown placement */
+  }
+  
+  .dropdown:hover .dropdown-menu,
+  .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  </style>
+   <!-- Spinner Start -->
+   <div id="spinner"
+   class="show bg-ever-green position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+   <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+       <span class="sr-only">Loading...</span>
+   </div>
+</div>
+<!-- Spinner End -->
+
+
+<!-- Topbar Start -->
+<div class="container-fluid  px-5 d-none d-lg-block" style="background-color:#044e02">
+   <div class="row gx-0 align-items-center">
+       <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+           <div class="d-flex">
+               <a href="#" class="text-white me-4"><i
+                       class="fas fa-envelope text-white me-2"></i>info@zanzivarsity.ac.tz</a>
+               <a href="#" class="text-white me-4"><i
+                       class="fas fa-envelope text-white me-2"></i>admission@zanzivarsity.ac.tz</a>
+               <a href="#" class="text-white me-0"><i class="fas fa-phone-alt text-White me-2"></i>+255 772 601
+                   303</a>
+           </div>
+       </div>
+       <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
+           <div class="d-inline-flex align-items-center" style="height: 45px;">
+               <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2"
+                   href="https://x.com/zanvarsity"><i class="fab fa-twitter fw-normal text-white"></i></a>
+               <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                       class="fab fa-facebook-f fw-normal text-white"></i></a>
+               <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                       class="fab fa-linkedin-in fw-normal text-white"></i></a>
+               <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                       class="fab fa-instagram fw-normal text-white"></i></a>
+               <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i
+                       class="fab fa-youtube fw-normal text-white"></i></a>
+           </div>
+       </div>
+       <div class="col-lg-4 text-center text-lg-end">
+           <div class="d-inline-flex align-items-center" style="height: 45px;">
+               <a href="#" class="text-white me-2"> Help</a><small style="color: #f8f9fa;"> / </small>
+               <a href="#" class="text-white mx-2"> Support</a><small style="color: #f8f9fa;"> / </small>
+               <a href="#" class="text-white ms-2"> Contact</a>
+           </div>
+       </div>
+   </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar & Hero Start -->
+<div class="container-fluid nav-bar p-0">
+   <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+       <a href="" class="navbar-brand p-0">
+           <h1 class="display-5 text-white m-0">
+               <img src="img/logo11.png" class="img-fluid" alt="Zanzibar University">
+           </h1>
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+           <span class="fa fa-bars"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarCollapse">
+           <div class="navbar-nav ms-auto py-0">
+               <a href="index.html" class="nav-item nav-link ">Home</a>
+               <div class="nav-item dropdown">
+                   <a href="about.html#aboutUs" class="nav-link dropdown-toggle" id="aboutDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                       About
+                   </a>
+                   <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                       <li><a class="dropdown-item" href="about.html#backgroundInfo">Background Information</a></li>
+                       <li><a class="dropdown-item" href="about.html#vision&mission">Mission & Vision</a></li>
+                       <li><a class="dropdown-item" href="about.html#board-of-trustees">Board of Trustee</a></li>
+                       <li><a class="dropdown-item" href="about.html#Darul-Iman">Darul Iman</a></li>
+                       <li><a class="dropdown-item" href="about.html#Council-Board">Council Board</a></li>
+                       <li><a class="dropdown-item" href="about.html#Principle-Officers">Principle Officers</a></li>
+                       <li><a class="dropdown-item" href="about.html#Senate-Board">Senate Board</a></li>
+
+
+
+                   </ul>
+               </div>
+
+               <!-- Multi-Level Dropdown for Admission -->
+               <div class="nav-item dropdown">
+                   <a href="admission.html" class="nav-link dropdown-toggle active" id="admissionDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                       Admission
+                   </a>
+                   <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+                       <li class="dropdown-submenu">
+                           <a class="dropdown-item dropdown-toggle" href="admission.html">Applications</a>
+                           <ul class="dropdown-menu">
+                               <li><a class="dropdown-item" href="admission.html">How to Apply</a></li>
+                               <li><a class="dropdown-item" href="admission.html#entryRequirement">Entyry Requirement</a></li>
+                               <li><a class="dropdown-item" href="admission.html#program_offered">Programmes Offered</a></li>
+                               <li><a class="dropdown-item" href="admission.html">Online Application</a></li>
+                           </ul>
+                       </li>
+                       <li class="dropdown-submenu">
+                           <a class="dropdown-item dropdown-toggle" href="admission2.html">Fees</a>
+                           <ul class="dropdown-menu">
+                               <li><a class="dropdown-item" href="admission2.html">How to Pay</a></li>
+                               <li><a class="dropdown-item" href="admission2.html">Fees Structure</a></li>
+
+                           </ul>
+                       </li>
+
+                       <!-- Submenu starts -->
+                       <li class="dropdown-submenu">
+                           <a class="dropdown-item dropdown-toggle" href="#">Transfers</a>
+                           <ul class="dropdown-menu">
+                               <li><a class="dropdown-item" href="requirements.html">Student Transfers</a></li>
+                               <li><a class="dropdown-item" href="fees.html">Postponent </a></li>
+                               <li><a class="dropdown-item" href="fees.html">Resumption of Studies</a></li>
+                           </ul>
+                       </li>
+                       <!-- Submenu ends -->
+
+                       <li class="dropdown-submenu">
+                           <a class="dropdown-item dropdown-toggle" href="#">Others</a>
+                           <ul class="dropdown-menu">
+                               <li><a class="dropdown-item" href="requirements.html">International Students</a>
+                               </li>
+                               <li><a class="dropdown-item" href="fees.html">Scholarships</a></li>
+                               <li><a class="dropdown-item" href="visa.html">Short Courses</a></li>
+                           </ul>
+                       </li>
+                   </ul>
+               </div>
+
+               <a href="academic.html" class="nav-item nav-link">Academic</a>
+               <a href="directirate.html" class="nav-item nav-link">Directorates</a>
+               <a href="facilities.html" class="nav-item nav-link">Facilities</a>
+           </div>
+       </div>
+   </nav>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+  <div class="billing-container">
+    <div class="billing-header">
+      <h2 style="color: #013220;">Payment Instruction <br><i style="font-size: 1.5rem;"><b>(Please Read them Carefully)</b> </i></h2>
+      
+      <p>
+        <ol style="text-align: start;">
+          <li>No Payment will be Allowed if not followed the Stipulated Channel.</li>
+            <li>The Fee Structure is subjected to change from time to time by the University Council.</li>
+            
+            <li>Access to Studies and Examination is only granted to students who have paid thier allocated installments accordingly.</li>
+        </ol>
+      </p>
+    </div>
+
+    <div class="step-container">
+      <div class="step" id="step1">
+        <h3 style="color: white;">Step 1</h3>
+        <p>Generate Control Number</p>
+      </div>
+      <div class="step" id="step2">
+        <h3 style="color: white;">Step 2</h3>
+        <p>Select Mode of Payment</p>
+      </div>
+    </div>
+
+    <div class="step-content">
+      <!-- Step 1 Content -->
+      <div id="step1-content" style="display: none;">
+        <div class="popup-message confetti-box";>
+          🎉 The link for generating your Control Number is:
+          <br><strong><a href="http://www.billing.zumis.ac.tz" target="_blank">www.billing.zumis.ac.tz</a></strong>
+        </div>
+      </div>
+
+      <!-- Step 2 Content -->
+      <div id="step2-content" style="display: none;">
+        <h3 style="text-align:center; color: #28a745;">Select a Payment Method</h3>
+        <div class="payment-methods">
+          <div class="sub-step" id="pay-pbz">💰 Pay Using PBZ Bank</div>
+          <div class="sub-step" id="pay-airtel">📱 Pay Using Airtel Money</div>
+          <div class="sub-step" id="pay-tigo">📞 Pay Using Tigo Pesa</div>
+        </div>
+        <div class="popup-message" id="payment-message" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="celebration" id="celebration"></div>
+  <div class="newsletter-area newsletter-two" style="margin-bottom: 0;">
+    <div class="container" style="width: auto;">
+        <div class="row">
+            <div class="col-lg-5 col-md-5">
+                <div class="newsletter-content">
+                    <h3>Subscribe</h3>
+                    <h2>To Our Newsletter</h2>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7">
+                <div class="newsletter-form angle">
+                    <form id="subscribeForm">
+                        <div class="subscribe-form">
+                            <input required id="mc-email" type="email" name="email"
+                                placeholder="Enter your email address...">
+                            <button id="mc-submit" type="submit">SUBSCRIBE</button>
+                        </div>
+                    </form>
+
+                    <div class="mailchimp-alerts text-centre fix pull-right">
+                        <div class="mailchimp-submitting" style="display: none;">Submitting...</div>
+                        <div class="mailchimp-success" style="display: none;">Subscription successful! Thank you.
+                        </div>
+                        <div class="mailchimp-error" style="display: none;">Something went wrong. Please try again.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="footer-widget-area" style="margin-top: 0;">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-lg-3 col-md-6">
+                <div class="single-footer-widget">
+                    <div class="footer-logo">
+                        <a href="index"><img src="./img/logo11.png" alt="Zanzibar University Logo"></a>
+                    </div>
+                    <p style="font-size:16px;font-weight:500">Center of Excellence, Spring of Knowledge and Virtue.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="col-lg-3 col-md-6">
+                <div class="single-footer-widget">
+                    <h3>Get in Touch</h3>
+                    <a href="tel:+255772601303"><i class="fa fa-phone"></i> +255 772 601 303</a>
+                    <span><i class="fa fa-envelope"></i> info@zanvarsity.ac.tz</span>
+                    <span><i class="fa fa-globe"></i> www.zanvarsity.ac.tz</span>
+                    <span><i class="fa fa-map-marker-alt"></i> Tunguu - Zanzibar</span>
+                </div>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="single-footer-widget">
+                    <h3>Useful Links</h3>
+                    <ul class="footer-list">
+                        <li><a href="https://www.tcu.go.tz" target="_blank">Tanzania Commission for Universities</a>
+                        </li>
+                        <li><a href="https://www.nactvet.go.tz/" target="_blank">National Council for Technical
+                                Education</a></li>
+                        <li><a href="https://www.heslb.go.tz/" target="_blank">Higher Education Student's Loans
+                                Board</a></li>
+                        <li><a href="https://zolas.zhelb.go.tz/zolas/login/auth" target="_blank">Zanzibar Higher
+                                Education Loans Board</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-lg-3 col-md-6">
+                <div class="single-footer-widget">
+                    <h3>Social Media</h3>
+                    <div class="social-icons">
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2"
+                            href="https://x.com/zanvarsity"><i
+                                class="fab fa-twitter fw-normal text-success"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                                class="fab fa-facebook-f fw-normal text-success"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                                class="fab fa-linkedin-in fw-normal text-success"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i
+                                class="fab fa-instagram fw-normal text-success"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i
+                                class="fab fa-youtube fw-normal text-success"></i></a>
+                        <!-- <a href="https://www.facebook.com/zanzibaruniversityofficial/" target="_blank"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="https://twitter.com/zanvarsity" target="_blank"><i class="zmdi zmdi-twitter"></i></a>
+                            <a href="https://tz.linkedin.com/company/zanzibar-university-zu" target="_blank"><i class="zmdi zmdi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/zanzibaruniversity.zu/" target="_blank"><i class="zmdi zmdi-instagram"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Copyright Bar -->
+<div class="footer-bottom">
+    <div class="container text-center">
+        <p>© 2025 Zanzibar University. All rights reserved. | Designed by ICT Department</p>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-success btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+<style>
+    
+  /* Celebration Coin Confetti */
+  .celebration {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 999;
+  }
+
+  .coin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/71/Gold_coin_icon.png');
+    background-size: cover;
+    animation: fall 3s linear infinite;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  .winning-card {
+    animation: pulseScale 0.6s ease;
+  }
+
+  @keyframes pulseScale {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+<script src="js/billing.js" defer></script>
+<script>
+  const subStepContainer = document.querySelector('.payment-methods');
+
+  document.addEventListener('click', (e) => {
+    // If click is outside the payment options, reset
+    if (!subStepContainer.contains(e.target)) {
+      subSteps.forEach(s => {
+        s.classList.remove('blurred', 'selected');
+      });
+      messageBox.style.display = 'none';
+    }
+  });
+
+  function launchCelebration() {
+    const celebration = document.getElementById('celebration');
+    celebration.innerHTML = '';
+    for (let i = 0; i < 20; i++) {
+      const coin = document.createElement('div');
+      coin.className = 'coin';
+      coin.style.left = Math.random() * 100 + 'vw';
+      coin.style.animationDuration = (2 + Math.random() * 1.5) + 's';
+      celebration.appendChild(coin);
+    }
+
+    setTimeout(() => celebration.innerHTML = '', 3000); // Clear after 3s
+  }
+
+  // Updated sub-step click
+  subSteps.forEach(step => {
+    step.addEventListener('click', (e) => {
+      e.stopPropagation();
+      subSteps.forEach(s => {
+        if (s !== step) s.classList.add('blurred');
+        s.classList.remove('selected');
+      });
+
+      step.classList.add('selected');
+      step.classList.remove('blurred');
+
+      const msg = messages[step.id];
+      if (msg) {
+        messageBox.innerHTML = msg;
+        messageBox.style.display = 'block';
+        messageBox.classList.remove('fadeInUp');
+        void messageBox.offsetWidth;
+        messageBox.classList.add('fadeInUp');
+        messageBox.classList.add('winning-card');
+        launchCelebration();
+      }
+    });
+  });
+  
+</script>
+
+  <script>
+    const step1 = document.getElementById('step1');
+    const step2 = document.getElementById('step2');
+    const step1Content = document.getElementById('step1-content');
+    const step2Content = document.getElementById('step2-content');
+    const messageBox = document.getElementById('payment-message');
+    const subSteps = document.querySelectorAll('.sub-step');
+
+    // Step switching
+    step1.addEventListener('click', () => {
+      step1.classList.add('active');
+      step2.classList.remove('active');
+      step1Content.style.display = 'block';
+      step2Content.style.display = 'none';
+      messageBox.style.display = 'none';
+      subSteps.forEach(s => s.classList.remove('selected', 'blurred'));
+    });
+
+    step2.addEventListener('click', () => {
+      step2.classList.add('active');
+      step1.classList.remove('active');
+      step1Content.style.display = 'none';
+      step2Content.style.display = 'block';
+      messageBox.style.display = 'none';
+      subSteps.forEach(s => s.classList.remove('selected', 'blurred'));
+    });
+
+    // Messages per sub-step
+    const messages = {
+      "pay-pbz": `Visit any <strong>PBZ Bank</strong> branch or agent and provide your money and <strong>Control Number</strong>.`,
+      "pay-airtel": `You can pay directly using <strong>Airtel Money</strong> by following this link: 
+        <a href="#">Pay Using Airtel Money</a>.`,
+      "pay-tigo": `
+        <strong>Pay Using Tigo Pesa</strong>
+        <ol>
+          <li>Dial Tigo Pesa Menu <code>*150*01#</code></li>
+          <li>Select Number 4: <strong>Lipa Bili</strong></li>
+          <li>Select Number 3: <strong>Ingiza Number ya Kampuni</strong></li>
+          <li>Enter Our Company Number: <strong>244099</strong></li>
+          <li>Enter the exact Amount as shown in the Control Number Details</li>
+          <li>Enter the Control Number Provided</li>
+          <li>Enter Your Tigo Pesa PIN to Authorize Payment</li>
+        </ol>`
+    };
+
+    // Sub-step selection
+    subSteps.forEach(step => {
+      step.addEventListener('click', () => {
+        subSteps.forEach(s => {
+          if (s !== step) s.classList.add('blurred');
+          s.classList.remove('selected');
+        });
+
+        step.classList.add('selected');
+        step.classList.remove('blurred');
+
+        const msg = messages[step.id];
+        if (msg) {
+          messageBox.innerHTML = msg;
+          messageBox.style.display = 'block';
+          messageBox.classList.remove('fadeInUp');
+          void messageBox.offsetWidth;
+          messageBox.classList.add('fadeInUp');
+        }
+      });
+    });
+  </script>
+
+<script>
+ fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+  //document.getElementById("footer").innerHTML = fetch("footer.html").then(res => res.text()).then(data => {
+  //  document.getElementById("footer").innerHTML = data;
+ // });
+</script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

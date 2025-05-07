@@ -16,61 +16,78 @@ $(document).ready(function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    let dots = document.querySelectorAll(".itemDot");
-    let contents = document.querySelectorAll(".title-box");
-    let circle = document.querySelector(".dotCircle");
-    let currentIndex = 0;
-    let angleStep = 360 / dots.length;
-
-    function arrangeDots() {
-        dots.forEach((dot, index) => {
-            let angle = angleStep * index;
-            let x = 200 * Math.cos(angle * (Math.PI / 180)) + 170; // Adjusted for larger circle size
-            let y = 210 * Math.sin(angle * (Math.PI / 180)) + 170; // Adjusted for larger circle size
-            dot.style.transform = `translate(${x}px, ${y}px)`;
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    // ———————————————
+    // 1) Grab elements & compute
+    const circle   = document.querySelector(".dotCircle");
+    const dots     = document.querySelectorAll(".dotCircle .itemDot");
+    const contents = document.querySelectorAll(".contentCircle .title-box");
+    const total    = dots.length;
+    const angleStep = 360 / total;
+    let   currentIndex = 0;
+  
+    if (!circle || total === 0 || contents.length === 0) {
+      console.warn("Rotation script: missing .dotCircle, .itemDot or .title-box");
+      return;
     }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const circle = document.querySelector(".circle"); // or use an ID if available
-        const dots = document.querySelectorAll(".dot");
-        const contents = document.querySelectorAll(".tab-content");
-        let currentIndex = 0;
-        const angleStep = 360 / dots.length;
-    
-        function rotateItems() {
-            if (!circle || !dots.length || !contents.length) return;
-    
-            circle.style.transform = `rotate(${angleStep * currentIndex}deg)`;
-            dots.forEach(d => d.classList.remove("active", "focused"));
-            contents.forEach(content => content.classList.remove("active"));
-            dots[currentIndex].classList.add("active", "focused");
-            contents[currentIndex].classList.add("active");
-            currentIndex = (currentIndex + 1) % dots.length;
-        }
-    
-        if (dots.length && contents.length && circle) {
-            arrangeDots(); // Make sure this is defined
-            setInterval(rotateItems, 2500);
-    
-            dots.forEach(dot => {
-                dot.addEventListener("click", function () {
-                    dots.forEach(d => d.classList.remove("active", "focused"));
-                    this.classList.add("active", "focused");
-                    let tab = this.getAttribute("data-tab");
-                    contents.forEach(content => content.classList.remove("active"));
-                    contents[tab - 1].classList.add("active");
-                    currentIndex = tab - 1;
-                    rotateItems();
-                });
-            });
-        } else {
-            console.warn("Required elements not found in DOM.");
-        }
+  
+    // ———————————————
+    // 2) Position dots around the circle
+    function arrangeDots() {
+      const radiusX = circle.clientWidth  / 2; // e.g. 212.5px if width is 425
+      const radiusY = circle.clientHeight / 2;
+      dots.forEach((dot, i) => {
+        const theta = angleStep * i * Math.PI / 180;
+        // center + radius × direction
+        const x = radiusX * Math.cos(theta);
+        const y = radiusY * Math.sin(theta);
+        dot.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    }
+  
+    // ———————————————
+    // 3) Rotate & swap active states
+    function rotateItems() {
+      // rotate entire circle container
+      circle.style.transform = `rotate(${angleStep * currentIndex}deg)`;
+  
+      // clear old states
+      dots.forEach(d => d.classList.remove("active", "focused"));
+      contents.forEach(c => c.classList.remove("active"));
+  
+      // set new
+      dots[currentIndex].classList.add("active", "focused");
+      contents[currentIndex].classList.add("active");
+  
+      // advance index
+      currentIndex = (currentIndex + 1) % total;
+    }
+  
+    // ———————————————
+    // 4) Wire it up
+    arrangeDots();
+    rotateItems();                 // show the first panel immediately
+    setInterval(rotateItems, 2500);
+  
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        currentIndex = i;
+        rotateItems();
+      });
     });
-}
-);
+  
+    // ———————————————
+    // 5) OPTIONAL: Initialize AOS if it’s loaded
+    if (typeof AOS !== "undefined") {
+      AOS.init({
+        duration: 600,
+        once: true,
+      });
+    } else {
+      // If you don’t plan to use AOS, you can remove any AOS.init() calls entirely.
+      console.info("AOS is not loaded—skipping AOS.init()");
+    }
+  });
 
 (function ($) {
     "use strict";
