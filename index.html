@@ -365,51 +365,20 @@
         </div> -->
     <!-- Carousel End -->
     <div class="row justify-content-center align-items-center text-center g-4" style="background-color:#094b1a;">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="holderCircle">
-                <div class="dotCircle" style="background-color: aliceblue;">
-                    <span class="itemDot active" data-tab="1"><i class="fa fa-info"></i></span>
-                    <span class="itemDot" data-tab="2"><i class="fa fa-map"></i></span>
-                    <span class="itemDot" data-tab="3"><i class="fa fa-user"></i></span>
-                    <span class="itemDot" data-tab="4"><i class="fa fa-tags"></i></span>
-                    <span class="itemDot" data-tab="5"><i class="fa fa-globe"></i></span>
-                    <span class="itemDot" data-tab="6"><i class="fa fa-briefcase"></i></span>
-                </div>
-                <div class="contentCircle">
-                    <div class="title-box active">
-                        <h2>About ZU</h2>
-                        <p class="p">The Zanzibar University, the first University on the Isles,
-                            a private institution founded by Darul Iman Charitable Association (DICA)</p>
-                    </div>
-                    <div class="title-box">
-                        <h2>Location</h2>
-                        <p class="p">The main campus is situated at <b>Tunguu</b> area, in the Central District while
-                            other campus is
-                            located at <b>Mpendae</b>.</p>
-                    </div>
-                    <div class="title-box">
-                        <h2>Registration</h2>
-                        <p class="p">The University received it's letter of Interim Registration in 1998, then
-                            Certificate of Provisional Registration in 1999, and finally it's Certificate of Full
-                            Registration on 4th May, 2000.</p>
-                    </div>
-                    <div class="title-box">
-                        <h2>Membership</h2>
-                        <p class="p">The University is a Member of various institutions such as IUCEA, ACU, AAU,
-                            TAPU, TUSA, TACOGA, ZHELB, HESLB, NAMA, ADB, SAVE CHILDREN.</p>
-                    </div>
-                    <div class="title-box">
-                        <h2>Motto</h2>
-                        <p class="p">The Spring of Knowledge and Virtue.</p>
-                    </div>
-                    <div class="title-box">
-                        <h2>Expertise</h2>
-                        <p class="p">The university is renowened for having Experts in various fields eg. Business,
-                            Technology, Banking, Law, Engineering, Sociology, Education, Health, Science, etc.</p>
-                    </div>
-                </div>
+        <div class="circle-container">
+            <div class="dot-circle" id="dotCircle">
+              <span class="item-dot active" data-index="0"><i class="fa fa-info"></i></span>
+              <span class="item-dot" data-index="1"><i class="fa fa-map"></i></span>
+              <span class="item-dot" data-index="2"><i class="fa fa-user"></i></span>
+              <span class="item-dot" data-index="3"><i class="fa fa-tags"></i></span>
+              <span class="item-dot" data-index="4"><i class="fa fa-globe"></i></span>
+              <span class="item-dot" data-index="5"><i class="fa fa-briefcase"></i></span>
             </div>
-        </div>
+            <div class="center-content" id="centerContent">
+              <h2>About ZU</h2>
+              <p>The Zanzibar University, the first University on the Isles, a private institution founded by DICA.</p>
+            </div>
+          </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="card custom-card">
                 <div class="image-container">
@@ -1007,6 +976,13 @@
 
     <!-- Bootstrap JS + Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- Your custom JS (main.js) -->
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 

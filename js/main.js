@@ -16,65 +16,58 @@ $(document).ready(function () {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    // ———————————————
-    // 1) Grab elements & compute
-    const circle   = document.querySelector(".dotCircle");
-    const dots     = document.querySelectorAll(".dotCircle .itemDot");
-    const contents = document.querySelectorAll(".contentCircle .title-box");
-    const total    = dots.length;
-    const angleStep = 360 / total;
-    let   currentIndex = 0;
-  
-    if (!circle || total === 0 || contents.length === 0) {
-      console.warn("Rotation script: missing .dotCircle, .itemDot or .title-box");
-      return;
-    }
-  
-    // ———————————————
-    // 2) Position dots around the circle
-    function arrangeDots() {
-      const radiusX = circle.clientWidth  / 2; // e.g. 212.5px if width is 425
-      const radiusY = circle.clientHeight / 2;
-      dots.forEach((dot, i) => {
-        const theta = angleStep * i * Math.PI / 180;
-        // center + radius × direction
-        const x = radiusX * Math.cos(theta);
-        const y = radiusY * Math.sin(theta);
-        dot.style.transform = `translate(${x}px, ${y}px)`;
-      });
-    }
-  
-    // ———————————————
-    // 3) Rotate & swap active states
-    function rotateItems() {
-      // rotate entire circle container
-      circle.style.transform = `rotate(${angleStep * currentIndex}deg)`;
-  
-      // clear old states
-      dots.forEach(d => d.classList.remove("active", "focused"));
-      contents.forEach(c => c.classList.remove("active"));
-  
-      // set new
-      dots[currentIndex].classList.add("active", "focused");
-      contents[currentIndex].classList.add("active");
-  
-      // advance index
-      currentIndex = (currentIndex + 1) % total;
-    }
-  
-    // ———————————————
-    // 4) Wire it up
-    arrangeDots();
-    rotateItems();                 // show the first panel immediately
-    setInterval(rotateItems, 2500);
-  
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        currentIndex = i;
-        rotateItems();
-      });
-    });
+const dots = document.querySelectorAll(".item-dot");
+const centerContent = document.getElementById("centerContent");
+
+const texts = [
+  {
+    title: "About ZU",
+    desc: "The Zanzibar University, the first University on the Isles, a private institution founded by DICA."
+  },
+  {
+    title: "Location",
+    desc: "Main campus at Tunguu, Central District. Another at Mpendae."
+  },
+  {
+    title: "Registration",
+    desc: "Interim Reg. in 1998, Full Reg. on 4th May 2000."
+  },
+  {
+    title: "Membership",
+    desc: "Member of IUCEA, ACU, AAU, TAPU, TUSA, TACOGA, ZHELB, etc."
+  },
+  {
+    title: "Motto",
+    desc: "The Spring of Knowledge and Virtue."
+  },
+  {
+    title: "Expertise",
+    desc: "Experts in Business, Law, Engineering, Education, Health, etc."
+  }
+];
+
+let currentIndex = 0;
+const totalDots = dots.length;
+
+// Position dots around circle
+dots.forEach((dot, index) => {
+  const angle = (index / totalDots) * 2 * Math.PI;
+  const radius = 150;
+  const x = radius * Math.cos(angle);
+  const y = radius * Math.sin(angle);
+  dot.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+// Rotate active state every 3 seconds
+setInterval(() => {
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[currentIndex].classList.add("active");
+
+  const { title, desc } = texts[currentIndex];
+  centerContent.innerHTML = `<h2>${title}</h2><p>${desc}</p>`;
+
+  currentIndex = (currentIndex + 1) % totalDots;
+}, 3000);
   
     // ———————————————
     // 5) OPTIONAL: Initialize AOS if it’s loaded
@@ -87,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // If you don’t plan to use AOS, you can remove any AOS.init() calls entirely.
       console.info("AOS is not loaded—skipping AOS.init()");
     }
-  });
+  
 
 (function ($) {
     "use strict";

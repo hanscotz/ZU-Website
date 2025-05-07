@@ -234,73 +234,56 @@
             color: 		#013220;
         }
 
-        .holderCircle {
-            text-align: center;
-            padding: 50px;
-            position: relative;
-            
+       /* Container for the circular holder */
+       .circle-container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 50px auto;
+      }
+      
+      .dot-circle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        animation: spin 60s linear infinite;
+      }
+      
+      .item-dot {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #ccc;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        transform-origin: center center;
+        transition: all 0.5s ease;
+      }
+      
+      .item-dot.active {
+        background: #0a58ca;
+        color: #fff;
+      }
+      
+      .center-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 250px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
         }
-        .dotCircle {
-            position: relative;
-            width: 425px; /* Further increased size */
-            height: 425px; /* Further increased size */
-            margin: 0 auto;
-            border-radius: 50%;
-            border: 5px solid #014613;
-            transition: transform 2.5s linear;
-        }
-        .dotCircle:hover {
-            transform: translateY(-8px);
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-        .itemDot {
-            position: absolute;
-            width: 60px; /* Increased size */
-            height: 60px; /* Increased size */
-            background: #43c55f;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 2.5s linear, background-color 0.3s ease, box-shadow 0.3s ease;
-            font-size: 25px; /* Adjusted icon size */
-            
-        }
-        .itemDot.focused {
-            background-color: #000000;
-            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
-        }
-        .contentCircle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150px; /* Increased size */
-            height: 150px; /* Increased size */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 5px; /* Adjusted font size */
-            padding: 5px; /* Adjusted padding */
-        }
-        .title-box {
-            display: none;
-            color: black;.title-box .title {
-                font-weight: 600;
-                letter-spacing: 2px;
-                position: relative;
-                z-index: -1;
-            }
-
-        }
-        .title-box.active {
-            display: block;
-
-        }
+      }
+      
         .custom-card {
             position: relative;
             overflow: visible;
