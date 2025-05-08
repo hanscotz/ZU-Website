@@ -52,7 +52,7 @@ const totalDots = dots.length;
 // Position dots around circle
 dots.forEach((dot, index) => {
   const angle = (index / totalDots) * 2 * Math.PI;
-  const radius = 150;
+  const radius = 195;
   const x = radius * Math.cos(angle);
   const y = radius * Math.sin(angle);
   dot.style.transform = `translate(${x}px, ${y}px)`;
@@ -265,6 +265,7 @@ document.addEventListener('click', function (e) {
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init(); // Initialize AOS
 });
+
 
 
 

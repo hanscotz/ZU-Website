@@ -172,9 +172,9 @@
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle" href="#">Transfers</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="requirements.html">Student Transfers</a></li>
-                                    <li><a class="dropdown-item" href="fees.html">Postponent </a></li>
-                                    <li><a class="dropdown-item" href="fees.html">Resumption of Studies</a></li>
+                                    <li><a class="dropdown-item" href="transfer.html#transfer">Student Transfers</a></li>
+                                    <li><a class="dropdown-item" href="transfer.html#postponent">Postponent & <br>Resumption</a></li>
+                                    
                                 </ul>
                             </li>
                             <!-- Submenu ends -->
@@ -191,7 +191,45 @@
                         </ul>
                     </div>
 
-                    <a href="academic.html" class="nav-item nav-link">Academic</a>
+                    <div class="nav-item dropdown">
+    <a href="admission.html" class="nav-link dropdown-toggle" id="academicDropdown" role="button"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        Academics
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="academicDropdown">
+        <!-- Faculties & Institutes (has submenu) -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">Faculties & Institutes</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="faculty-fba">Faculty of Business Administration (FBA)</a></li>
+                <li><a class="dropdown-item" href="faculty-fls">Faculty of Law and Shariah (FLS)</a></li>
+                <li><a class="dropdown-item" href="faculty-fass">Faculty of Arts and Social Sciences (FASS)</a></li>
+                <li><a class="dropdown-item" href="faculty-foe">Faculty of Engineering (FOE)</a></li>
+                <li><a class="dropdown-item" href="faculty-fohas">Faculty of Health and Allied Sciences (FOHAS)</a></li>
+                <li><a class="dropdown-item" href="faculty-fos">Faculty of Science (FOS)</a></li>
+                <li><a class="dropdown-item" href="#">Institute of Postgraduate Studies and Research (IPGSR)</a></li>
+                <li><a class="dropdown-item" href="institute-iibf">Institute of Islamic Banking and Finance (IIBF)</a></li>
+                <li><a class="dropdown-item" href="institute-ice">Institute of Continuing Education (ICE)</a></li>
+            </ul>
+        </li>
+
+        <!-- Fees (has submenu) -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">Research &amp; Publications</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="academic-publications">Our Researcher's Publications</a></li>
+                <li><a class="dropdown-item" href="repository">Repository</a></li>
+            </ul>
+        </li>
+
+        <!-- Transfers (no submenu) -->
+        <li><a class="dropdown-item" href="#">Transfers</a></li>
+
+        <!-- Others (no submenu) -->
+        <li><a class="dropdown-item" href="#">Others</a></li>
+    </ul>
+</div>
+
                     <a href="directirate.html" class="nav-item nav-link">Directorates</a>
                     <a href="facilities.html" class="nav-item nav-link">Facilities</a>
                 </div>
@@ -365,7 +403,9 @@
         </div> -->
     <!-- Carousel End -->
     <div class="row justify-content-center align-items-center text-center g-4" style="background-color:#094b1a;">
-        <div class="circle-container">
+        <!-- First Column: Circle -->
+        <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="circle-container">
             <div class="dot-circle" id="dotCircle">
               <span class="item-dot active" data-index="0"><i class="fa fa-info"></i></span>
               <span class="item-dot" data-index="1"><i class="fa fa-map"></i></span>
@@ -379,29 +419,30 @@
               <p>The Zanzibar University, the first University on the Isles, a private institution founded by DICA.</p>
             </div>
           </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="card custom-card">
-                <div class="image-container">
-                    <img src="./img/profile.png" alt="profile">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">Vice Chancellor's Message</h3>
-                    <p class="card-text">
-                        Assalamu Alaikum wa Rahmatullahi wa Barakatuhu. It gives me great pleasure and satisfaction to
-                        welcome all to the official
-                        Webpage of the Zanzibar University. I would like to convey special greetings
-                        to the academic and administrative staff, non-degree, undergraduate and
-                        graduate students, alumni, parents and guardians, well wishers public and
-                        .....<a href="./important/vcnote.pdf" class="read-more">Read more</a>
-                    </p>
-                </div>
-                <div class="button-bottom">
-                    <a href="./important/vcnote.pdf" class="btn btn-success">View More</a>
-                </div>
-            </div>
         </div>
-    </div>
-    </div>
+      
+        <!-- Second Column: VC Message -->
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="card custom-card text-start">
+            <div class="image-container">
+              <img src="./img/profile.png" alt="profile">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Vice Chancellor's Message</h3>
+              <p class="card-text">
+                Assalamu Alaikum wa Rahmatullahi wa Barakatuhu. It gives me great pleasure and satisfaction to
+                welcome all to the official Webpage of the Zanzibar University. I would like to convey special greetings
+                to the academic and administrative staff, non-degree, undergraduate and graduate students, alumni,
+                parents and guardians, well wishers public and .....<a href="./important/vcnote.pdf" class="read-more">Read more</a>
+              </p>
+            </div>
+            <div class="button-bottom">
+              <a href="./important/vcnote.pdf" class="btn btn-success">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     <!-- Modal Search Start -->
     <!-- <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">

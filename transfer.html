@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS (for accordion functionality) -->
  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/admission2.css">
@@ -370,6 +373,13 @@
         justify-content: center;
     }
 }
+p,ol,li{
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
 
 .footer-bottom {
     background-color: #0d684d;
@@ -580,7 +590,7 @@
                        <li class="dropdown-submenu">
                            <a class="dropdown-item dropdown-toggle" href="#">Transfers</a>
                            <ul class="dropdown-menu">
-                               <li><a class="dropdown-item" href="transfer.html#transfer">Student Transfers</a></li>
+                               <li><a class="dropdown-item" href="#transfer">Student Transfers</a></li>
                                <li><a class="dropdown-item" href="transfer.html#postponent">Postponent & <br>Resumption</a></li>
                                
                            </ul>
@@ -607,106 +617,210 @@
    </nav>
 </div>
 
-
-
-
-
-
-
-
-
-    
-
-  <div class="billing-container">
-    <div class="billing-header">
-      <h2 style="color: #013220;" id="payment">Payment Instruction <br><i style="font-size: 1.5rem;"><b>(Please Read them Carefully)</b> </i></h2>
-      
+<div class="container my-5">
+    <h2 class="text-center mb-4 " style="color: black; font-weight: bold;" id="transfer">Student Transfer Guidelines</h2>
+  
+    <!-- Transfer of Credit Units -->
+    <div class="mb-4">
+      <h4 style="color: black; font-weight: bold;">Transfer of Credit Units from Other Recognized Institutions</h4>
       <p>
-        <ol style="text-align: start;">
-          <li>No Payment will be Allowed if not followed the Stipulated Channel.</li>
-            <li>The Fee Structure is subjected to change from time to time by the University Council.</li>
+        <ol style="font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;">
+        <li>Postgraduate candidates from other recognized Institutions may transfer their credits to ZU.</li>
+        <li>Candidates from other recognized Institutions who would like to complete their postgraduate programmes at the Zanzibar University, may apply to Senate using Postgraduate form number ZU/PG.F20 through respective Faculty/Institutes and Senate Postgraduate Studies Committee to transfer from their previous Institution credits/units at least 50% of the total credits/units for the programme, provided the candidates meet the minimum entry qualifications for the programme in which they wish to enrol. For purposes of this regulation, the term ‘entry qualification’ shall include the respective programmes cut-off point in the relevant year.</li>
+        <li>Credit transfer can only be allowed if such credits have been obtained within a period of not more than two years.</li>
+        <li>Students discontinued from other Institutions shall not be allowed to transfer credits to the Zanzibar University.</li>
+        <li>Students shall be required to undertake at least 50%¸ of degree programme credit units at ZU. Maximum credit allowable for transfer, therefore, is 50% of the required credit units of a ZU degree programme.</li>  
+        <li> ZU students on study-abroad programmes shall be allowed to transfer credits obtained from the other Institutions to ZU.</li>
+        <li>Transfer of credits from ZU to other Institutions shall be governed by regulations of the receiving Institutions.</li>
+          </ol>  
             
-            <li>Access to Studies and Examination is only granted to students who have paid thier allocated installments accordingly.</li>
+            
+           
+            
+           
+      </p>
+    </div>
+  
+    <!-- Undergraduate Student Credit Transfer -->
+    <div class="mb-4">
+      <h4 style="color: black; font-weight: bold;">Undergraduate Student Credit Transfer</h4>
+      <p>
+        Undergraduate Student credit transfer is allowed only among Universities which are fully accredited by a recognized body in the country. A student may transfer credit units from another institution upon satisfying the following: -
+      </p>
+      <p>
+        <ol>
+            <li>The admission requirements for the academic programme applied for.</li>
+            <li>Courses for transfer must have been accredited by the Commission and/or another National Accreditation Board.</li>
+            <li>Transfer of equivalency of subjects, modules, courses and credit transfer is subject to the approval of TCU/NACTE through relevant Department, Faculty and DVC (Academic). Students from Foreign Universities shall be allowed on submission of Certificate of No Objection, Admission Letter and confirmation from recognized releasing institution.</li>
+            <li>The subject, course or module intended for credit accumulation must be relevant to the programme to which the student is to be registered.</li>
+            <li>Submission of an official statement of results from the releasing institution,</li>
+            <li>Obtaining CGPA of at least 2.0 in a scale of 5.0 depending on the year of transfer.</li>
+            <li>A student who intends to transfer his/her credits for purposes of graduating at Zanzibar University, shall be required to earn at least 50% of the total credits in the core course of the particular programme of the releasing institution.</li>
+            <li>Transfer of credits shall be allowable within a period not exceeding five years from the time were earned</li>
+            <li>The transferring student shall have cleared all his/her supplementary examinations at the releasing institution but may be allowed to transfer carry overs to Zanzibar University.</li>
+            <li>The transferring student shall understand and accept the terms and conditions regarding the sought programme at Zanzibar University</li>
+            <li>The transferring student shall have cleared all missed courses before Graduation.</li>
+            
         </ol>
       </p>
     </div>
-
-    <div class="step-container">
-      <div class="step" id="step1">
-        <h3 style="color: white;">Step 1</h3>
-        <p>Generate Control Number</p>
-      </div>
-      <div class="step" id="step2">
-        <h3 style="color: white;">Step 2</h3>
-        <p>Select Mode of Payment</p>
-      </div>
-    </div>
-
-    <div class="step-content">
-      <!-- Step 1 Content -->
-      <div id="step1-content" style="display: none;">
-        <div class="popup-message confetti-box";>
-          🎉 The link for generating your Control Number is:
-          <br><strong><a href="http://www.billing.zumis.ac.tz" target="_blank">www.billing.zumis.ac.tz</a></strong>
-        </div>
-      </div>
-
-      <!-- Step 2 Content -->
-      <div id="step2-content" style="display: none;">
-        <h3 style="text-align:center; color: #28a745;">Select a Payment Method</h3>
-        <div class="payment-methods">
-          <div class="sub-step" id="pay-pbz">💰 Pay Using PBZ Bank</div>
-          <div class="sub-step" id="pay-airtel">📱 Pay Using Airtel Money</div>
-          <div class="sub-step" id="pay-tigo">📞 Pay Using Tigo Pesa</div>
-        </div>
-        <div class="popup-message" id="payment-message" style="display: none;"></div>
-      </div>
-    </div>
-  </div>
-  <div class="celebration" id="celebration"></div>
   
+    <!-- Non-Degree Programme Transfer -->
+    <div class="mb-4">
+      <h4 style="color: black; font-weight: bold;">Non-degree Programme Transfer</h4>
+      <p>
+        Non Degree Student credit transfer is allowed only between Institutions which are fully accredited by a recognized body in the country. A student may transfer credit units from another institution upon satisfying the following: -
+      </p>
+      <p><ol>
+        <li>The admission requirements for the academic programme applied for.</li>
+        <li>Courses for transfer must have been accredited by the Commission and/or another National Accreditation Board.</li>
+        <li>Transfer of equivalency of subjects, modules, courses and credit transfer is subject to the approval of TCU through ICE, Department, Faculty and DVC (Academic). Students from Foreign Universities shall be allowed on submission of Certificate of No Objection, Admission Letter and confirmation from recognized releasing institution.</li>
+        <li>The subject, course or module intended for credit accumulation must be relevant to the programme to which the student is to be registered.</li>
+        <li>Submission of an official statement of results from the releasing institution,</li>
+        <li>Obtaining CGPA of at least 2.0 in a scale of 5.0 depending on the year of transfer.</li>
+        <li>A student who intends to transfer his/her credits for purposes of graduating at Zanzibar University, shall be required to earn at least 50% of the total credits in the core course of the particular programme of the releasing institution.</li>
+        <li>Transfer of credits shall be allowable within a period not exceeding five years from the time were earned</li>
+        <li>The transferring student shall have cleared all his/her supplementary examinations at the releasing institution but may be allowed to transfer carry overs to Zanzibar University.</li>
+        <li>The transferring student shall understand and accept the terms and conditions regarding the sought programme at Zanzibar University</li>
+        <li>The transferring student shall have cleared all missed courses before Graduation.</li>
+        <li>For NTA Programmes students shall follow NACTE guideline as prescribed in the website (www.nacte.go.tz).</li>
+    </ol>
+</p>
+    </div>
   
+    <!-- Course Equivalency -->
+    <div class="mb-4">
+      <h4 style="color: black; font-weight: bold;">Criteria for Establishing Equivalency of Courses</h4>
+      <p>In determining the equivalence of courses for purposes of transfer of credits the following criteria shall be used: -</p>
+      <ol>
+        <li>The course shall be from a programme of the same level as that of ZU course.</li>
+        <li>The course shall have a theoretical component i.e. involving final examination, excluding clinical-based courses.</li>
+        <li>Course content shall be at least 60 percent similar to that of the ZU course.</li>
+        <li>The number of teaching hours used to cover the course shall not be less than 60 percent of the hours used in the similar course at ZU.</li>
+        <li>Once a course has been accepted as being equivalent to a ZU course as per the criteria in this Regulation, the course shall be given the same number of credits as that of the course at ZU regardless of the credits in other recognized Institutions.
+        </li>
+      </ol>
+    </div>
+  
+    <!-- Grade Conversion -->
+    <div class="mb-4">
+      <h4 style="color: black; font-weight: bold;">Grade Conversion</h4>
+      <ol>
+        <li>Conversion of grades shall be done by anchoring the pass mark of the other recognized Institutions to that of ZU and accordingly determining the range of marks in the other University for the ZU grades.</li>
+        <li>In the case where only grades (and not scored marks) are available, the lower equivalent grade shall be assumed.
+        </li>
+    </div>
+  
+    <!-- Procedures and Administration -->
+    <div class="mb-4">
+      <h4 style="color: black; font-weight: bold;">Procedures and Administration of Student Credit Transfer</h4>
+      <ol>
+        <li>An application for transfer of credits from other universities to ZU shall be made prior to the commencement of the semester for which the transfer is expected to become effective.</li>
+        <li>An Application for credit transfer shall be submitted in writing to TCU/NACTE through relevant Department, Faculty and DVC (Academic) and shall be accompanied by copies of all required supporting documents.</li>
+        <li>Supporting documents for credit transfer application shall include the following: Official progressive report, admission letter from the releasing Institutions, course description, catalogue or syllabus (to include number of hours of teaching, method of assessment and grading system), An official translation of the original documents (in case of non-English documents), Photo-attached personal identification documents e.g. Birth certificate, passport or ID, and Certified copies of the original certificates used to gain admission into the releasing Institutions and Certificate of No Objection in case of foreign students</li>
+        <li>The applicant for credit transfer shall pay a non-refundable administration fee to be determined by Senate from time to time. The payment of fee shall not apply to ZU students on study arrangements abroad.</li>
+      </ol>
+    </div>
+  
+    <!-- Conformity to University Regulations -->
+    <div class="mb-4">
+      <h4 style="color: black; font-weight: bold;">Conformity to the University Regulations</h4>
+      <p>
+        All registered students are required to conform entirely to the University Charter, as well as Rules and Regulations, which may be issued, from time to time, by the University Council and Senate.
+      </p>
+    </div>
+  
+    <!-- Change of Programme -->
+    <div class="mb-4">
+      <h4 style="color: black; font-weight: bold;">Change of Programme</h4>
+      <p>
+        In exceptional circumstances, new students may be allowed to change programme within the first two weeks upon approval of TCU through Admissions and DVC-Academic Office.
+      </p>
+    </div>
+  </div> <br>
+
+
+
   <div class="container my-5">
-    <h2 class="text-center mb-4" style="color: #003300;" id="fee">Fee Structure 2024-2025</h2>
-    <div class="row justify-content-center g-4">
-      
-      <!-- Domestic Students (Tsh) -->
-      <div class="col-md-6 col-sm-12">
-        <a href="./important/FEE STRUCTURE FOR ACADEMIC YEAR 2024-2025.pdf" target="_blank" class="text-decoration-none">
-          <div class="card text-center shadow-sm border-success h-100">
-            <div class="card-body">
-              <h4 class="card-title text-success">Domestic Students</h4>
-              <p class="card-text">View the fee structure for local students (Tanzanian Shillings - Tsh).</p>
-            </div>
-            <div class="card-footer bg-success text-white">
-              View PDF
-            </div>
+    <h2 class="text-center mb-4 text" id="postponent" style="color: black; font-weight: bold;">Postponement and Resumption of Studies</h2>
+  
+    <div class="accordion" id="postponementAccordion">
+  
+      <!-- Postponement / Resumption -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button fw-bold text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Postponement / Resumption of Studies
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#postponementAccordion">
+          <div class="accordion-body">
+            <ol>
+           <li>Postponement of studies shall mean stopping studies for a semester or of a full academic year where the period will count into the student’s registration period. Postponement of studies shall only be considered, under special circumstances, as per regulations</li>
+           <li>Subject to the approval of both Senate and TCU/NACTE, a student may apply to postpone examinations or studies to the DVC (Academic) through the respective Faculty Dean or Institute Director and respective Head of Department.</li>
+           <li>No student shall be allowed to postpone studies except under special circumstances such as financial problems, poor health or social problems supported by satisfactory evidence where a formal postponement form is issued which shows the reason(s) for postponement in the opinion of the Senate, is strong enough to prevent one from pursuing studies effectively</li>
+           <li>The period of postponement of studies shall not count against the period of candidature for the programme a student is registered for.</li>
+           <li>The student who had postponed studies shall inform both Senate and TCU/NACTE through the DVC (Academic) about his/her resumption of studies through the respective Faculty Dean or Institute Director and respective Head of Department.</li>
+           <li>Students may be allowed to be away from studies for a period of one year. However, upon the application student may be allowed to extend for another one year if they are to be resumed into the same programme and year of studies where they left off.</li>
+        </ol>
           </div>
-        </a>
+        </div>
       </div>
   
-      <!-- Foreign Students (USD) -->
-      <div class="col-md-6 col-sm-12">
-        <a href="./important/FEE STRUCTURE 2024-2025.pdf" target="_blank" class="text-decoration-none">
-          <div class="card text-center shadow-sm border-success h-100">
-            <div class="card-body">
-              <h4 class="card-title text-success">Foreign Students</h4>
-              <p class="card-text">View the fee structure for international students (US Dollars - USD).</p>
-            </div>
-            <div class="card-footer bg-success text-white">
-              View PDF
-            </div>
+      <!-- Freezing of Studies -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed fw-bold text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Freezing of Studies
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#postponementAccordion">
+          <div class="accordion-body">
+            <ol>
+                <li>Freezing of studies shall mean stopping studies for a specified period of time where the period will not count into the student’s registration period.</li>
+                <li>The maximum period for freezing shall be one year.</li>
+                <li>Permission to resume studies must be sought from the DVC Academic.</li>
+                <li>For postgraduate students, permission to resume studies must be sought from the DVC Academic using form ZU/PG. F15.</li>
+            </ol>
           </div>
-        </a>
+        </div>
+      </div>
+  
+      <!-- Termination of Studies -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed fw-bold text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Termination of Studies
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#postponementAccordion">
+          <div class="accordion-body">
+            <p>Students may be terminated or discontinued from studies on the following grounds: -</p>
+            <ol>
+            <li>Breach of University regulations (including examination and admission regulations)</li>
+            <li>Breach of Immigration Regulations; and</li>
+            <li>Abscondment from studies</li>
+            </ol> 
+          </div>
+        </div>
       </div>
   
     </div>
   </div>
   
   
-  
-  
-  <div class="newsletter-area newsletter-two" style="margin-bottom: 0;">
+
+
+
+
+
+
+
+
+<div class="newsletter-area newsletter-two" style="margin-bottom: 0;">
     <div class="container" style="width: auto;">
         <div class="row">
             <div class="col-lg-5 col-md-5">
@@ -820,192 +934,17 @@
 <!-- Back to Top -->
 <a href="#" class="btn btn-success btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-<style>
-    
-  /* Celebration Coin Confetti */
-  .celebration {
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 999;
-  }
 
-  .coin {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/71/Gold_coin_icon.png');
-    background-size: cover;
-    animation: fall 3s linear infinite;
-  }
-
-  @keyframes fall {
-    0% {
-      transform: translateY(-100px) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) rotate(720deg);
-      opacity: 0;
-    }
-  }
-
-  .winning-card {
-    animation: pulseScale 0.6s ease;
-  }
-
-  @keyframes pulseScale {
-    0% {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    50% {
-      transform: scale(1.05);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-</style>
-
-<script>
-  const subStepContainer = document.querySelector('.payment-methods');
-
-  document.addEventListener('click', (e) => {
-    // If click is outside the payment options, reset
-    if (!subStepContainer.contains(e.target)) {
-      subSteps.forEach(s => {
-        s.classList.remove('blurred', 'selected');
-      });
-      messageBox.style.display = 'none';
-    }
-  });
-
-  function launchCelebration() {
-    const celebration = document.getElementById('celebration');
-    celebration.innerHTML = '';
-    for (let i = 0; i < 20; i++) {
-      const coin = document.createElement('div');
-      coin.className = 'coin';
-      coin.style.left = Math.random() * 100 + 'vw';
-      coin.style.animationDuration = (2 + Math.random() * 1.5) + 's';
-      celebration.appendChild(coin);
-    }
-
-    setTimeout(() => celebration.innerHTML = '', 3000); // Clear after 3s
-  }
-
-  // Updated sub-step click
-  subSteps.forEach(step => {
-    step.addEventListener('click', (e) => {
-      e.stopPropagation();
-      subSteps.forEach(s => {
-        if (s !== step) s.classList.add('blurred');
-        s.classList.remove('selected');
-      });
-
-      step.classList.add('selected');
-      step.classList.remove('blurred');
-
-      const msg = messages[step.id];
-      if (msg) {
-        messageBox.innerHTML = msg;
-        messageBox.style.display = 'block';
-        messageBox.classList.remove('fadeInUp');
-        void messageBox.offsetWidth;
-        messageBox.classList.add('fadeInUp');
-        messageBox.classList.add('winning-card');
-        launchCelebration();
-      }
-    });
-  });
-  
-</script>
-
-  <script>
-    const step1 = document.getElementById('step1');
-    const step2 = document.getElementById('step2');
-    const step1Content = document.getElementById('step1-content');
-    const step2Content = document.getElementById('step2-content');
-    const messageBox = document.getElementById('payment-message');
-    const subSteps = document.querySelectorAll('.sub-step');
-
-    // Step switching
-    step1.addEventListener('click', () => {
-      step1.classList.add('active');
-      step2.classList.remove('active');
-      step1Content.style.display = 'block';
-      step2Content.style.display = 'none';
-      messageBox.style.display = 'none';
-      subSteps.forEach(s => s.classList.remove('selected', 'blurred'));
-    });
-
-    step2.addEventListener('click', () => {
-      step2.classList.add('active');
-      step1.classList.remove('active');
-      step1Content.style.display = 'none';
-      step2Content.style.display = 'block';
-      messageBox.style.display = 'none';
-      subSteps.forEach(s => s.classList.remove('selected', 'blurred'));
-    });
-
-    // Messages per sub-step
-    const messages = {
-      "pay-pbz": `Visit any <strong>PBZ Bank</strong> branch or agent and provide your money and <strong>Control Number</strong>.`,
-      "pay-airtel": `You can pay directly using <strong>Airtel Money</strong> by following this link: 
-        <a href="#">Pay Using Airtel Money</a>.`,
-      "pay-tigo": `
-        <strong>Pay Using Tigo Pesa</strong>
-        <ol>
-          <li>Dial Tigo Pesa Menu <code>*150*01#</code></li>
-          <li>Select Number 4: <strong>Lipa Bili</strong></li>
-          <li>Select Number 3: <strong>Ingiza Number ya Kampuni</strong></li>
-          <li>Enter Our Company Number: <strong>244099</strong></li>
-          <li>Enter the exact Amount as shown in the Control Number Details</li>
-          <li>Enter the Control Number Provided</li>
-          <li>Enter Your Tigo Pesa PIN to Authorize Payment</li>
-        </ol>`
-    };
-
-    // Sub-step selection
-    subSteps.forEach(step => {
-      step.addEventListener('click', () => {
-        subSteps.forEach(s => {
-          if (s !== step) s.classList.add('blurred');
-          s.classList.remove('selected');
-        });
-
-        step.classList.add('selected');
-        step.classList.remove('blurred');
-
-        const msg = messages[step.id];
-        if (msg) {
-          messageBox.innerHTML = msg;
-          messageBox.style.display = 'block';
-          messageBox.classList.remove('fadeInUp');
-          void messageBox.offsetWidth;
-          messageBox.classList.add('fadeInUp');
-        }
-      });
-    });
-  </script>
-
-<script>
- fetch("header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header").innerHTML = data;
-    });
-  //document.getElementById("footer").innerHTML = fetch("footer.html").then(res => res.text()).then(data => {
-  //  document.getElementById("footer").innerHTML = data;
- // });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
