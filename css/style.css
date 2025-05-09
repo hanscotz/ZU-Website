@@ -138,6 +138,15 @@
     padding: 100px 0 60px 0;
 }
 
+.bg-breadcrumb1 {
+  background: url(../img/fba1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 100px 0 60px 0;
+}
+
 /*** Counter Facts ***/
 .counter-facts {
     background: linear-gradient(rgba(40, 167, 69, 0.9), rgba(40, 167, 69, 0.8)), url(../img/zu.jpg);
@@ -1168,3 +1177,26 @@
 
 
 
+/* Position the submenu to the left side */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu-left {
+  top: 0;
+  left: auto;
+  right: 100%;
+  margin-top: 0;
+}
+.dropdown-submenu .dropdown-menu {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+#dean-welcome, #dean-profile, #faculty-background, #departments, #publications {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}

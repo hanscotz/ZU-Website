@@ -63,413 +63,7 @@
 
 
 <header>
-  <style>
-      :root {
-  --bs-primary: #206e32; /* Green */
-  --bs-secondary: #ffffff; /* White */
-  --bs-white: #ffffff;
-  --bs-light: #f8f9fa; /* Light gray for better contrast */
-  --bs-dark: 	#013220; /* Dark green */
-}
-
-/*** Spinner ***/
-#spinner {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .5s ease-out, visibility 0s linear .5s;
-  z-index: 99999;
-}
-
-#spinner.show {
-  transition: opacity .5s ease-out, visibility 0s linear 0s;
-  visibility: visible;
-  opacity: 1;
-}
-
-
-/*** Back to Top Button ***/
-.back-to-top {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  display: flex;
-  width: 45px;
-  height: 45px;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--bs-primary);
-  color: var(--bs-white);
-  border-radius: 50%;
-  transition: 0.5s;
-  z-index: 99;
-}
-
-.back-to-top:hover {
-  background-color: var(--bs-dark);
-  color: var(--bs-white);
-}
-
-/*** Buttons ***/
-.btn {
-  font-weight: 600;
-  transition: .5s;
-}
-
-.btn-primary {
-  background: var(--bs-primary) !important;
-  color: var(--bs-white) !important;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  transition: 0.5s;
-  border: 1px solid var(--bs-dark);
-}
-
-.btn-primary:hover {
-  background: var(--bs-dark) !important;
-  color: var(--bs-white);
-  border: 1px solid var(--bs-dark);
-}
-
-.btn-secondary {
-  background: var(--bs-white);
-  color: var(--bs-primary);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  border: 1px solid var(--bs-primary);
-  transition: 0.5s;
-}
-
-.btn-secondary:hover {
-  background: var(--bs-primary);
-  color: var(--bs-white) !important;
-}
-
-
-
-.navbar-light .navbar-nav .nav-link {
-  color: #044e02;
-}
-
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-  color:white !important;
-  background: #044e02;
-  border-radius: 5px;
-  padding: 8px 12px;
-}
-
-/*** Hero Header ***/
-.bg-breadcrumb {
-  background: url(../img/zu.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 100px 0 60px 0;}
-
-
-  .newsletter-area {
-    background: #0d684d;
-    padding: 60px 0;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 0px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    margin: 0px;
-}
-
-.newsletter-content h3 {
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 5px;
-    color: white;
-}
-
-.newsletter-content h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.newsletter-form {
-    text-align: right;
-}
-
-.subscribe-form {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 15px;
-}
-
-.subscribe-form input[type="email"] {
-    padding: 15px 20px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-    width: 100%;
-    max-width: 320px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    transition: background 0.3s;
-}
-
-.subscribe-form input[type="email"]::placeholder {
-    color: #ddd;
-}
-
-.subscribe-form input[type="email"]:focus {
-    background: rgba(255, 255, 255, 0.2);
-    outline: none;
-}
-
-.subscribe-form button {
-    background-color: white;
-    border: none;
-    padding: 14px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #dd0e0e;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(255, 193, 7, 0.3);
-}
-
-.subscribe-form button:hover {
-    background-color: #ffca28;
-    color: white;
-    box-shadow: 0 6px 18px rgba(255, 193, 7, 0.5);
-}
-
-.mailchimp-alerts {
-    margin-top: 15px;
-    font-size: 15px;
-}
-
-.mailchimp-submitting {
-    color: #ffc107;
-}
-
-.mailchimp-success {
-    color: white;
-}
-
-.mailchimp-error {
-    color: #f44336;
-}
-
-@media screen and (max-width: 768px) {
-    .subscribe-form {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .newsletter-form {
-        text-align: left;
-    }
-}
-
-.footer-widget-area {
-    background: linear-gradient(135deg, #42c492, #068554);
-    padding: 60px 0;
-    color: #f1f1f1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 0;
-}
-
-.single-footer-widget {
-    margin-bottom: 0px;
-}
-
-.footer-logo img {
-    max-width: 700px;
-    margin-bottom: 20px;
-}
-    
-
-.single-footer-widget h3 {
-    font-size: 20px;
-    color: white;
-    margin-bottom: 20px;
-    position: relative;
-    font-weight: 600;
-}
-
-.single-footer-widget h3::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: white;
-    margin-top: 8px;
-    border-radius: 3px;
-}
-
-.single-footer-widget a,
-.single-footer-widget span {
-    display: block;
-    font-size: 15px;
-    margin-bottom: 10px;
-    color: #ddd;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.single-footer-widget a:hover {
-    color: #ffc107;
-    transform: translateX(5px);
-}
-
-.footer-list li {
-    list-style: none;
-    margin-bottom: 10px;
-}
-
-.footer-list a {
-    font-weight: 500;
-    color: #ddd;
-}
-
-.footer-list a:hover {
-    color: #ffc107;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-    color:white ;
-}
-
-.social-icons a {
-    background: #fffffe;
-    color: #3da51d;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 18px;
-    transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-    background: #0b3f07;
-   
-    -webkit-text-fill-color: white;
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .single-footer-widget {
-        text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
-
-.footer-bottom {
-    background-color: #0d684d;
-    padding: 20px 0;
-    color: #ccc;
-    font-size: 15px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.footer-bottom p {
-    margin: 0;
-    color: white;
-}
-
-.footer-bottom p a {
-    color: #ffc107;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.footer-bottom p a:hover {
-    color: #25d81f;
-    text-decoration: underline;
-}
-
-  
-
-.dropdown-menu :hover {
-  color: #006400 !important; /* dark green, or any color you prefer */
-  font-weight: bold !important;
-}
-
-
-/* Change color when clicked (active) */
-
-.dropdown-menu {
-  color: #003300 !important; /* even darker green or preferred color */
-  font-weight: bold !important;
-}
-
-/*smooth transition*/
-.navbar-nav .nav-link,
-.dropdown-menu .dropdown-item {
-  transition: color 0.3s ease;
-}
-
-
-
-/* Prevent menu from closing when clicking inside */
-.dropdown-menu .dropdown-item.dropdown-toggle:after {
-    content: " ▸";
-    float: right;
-}
-
-/* Hover dropdown for desktop */
-@media (min-width: 992px) {
-    .navbar-nav .dropdown:hover > .dropdown-menu {
-      display: block;
-      margin-top: 0; /* remove delay */
-      color: rgb(128, 0, 38);
-    }
-  
-    .dropdown-submenu:hover > .dropdown-menu {
-      display: block;
-      color: rgb(128, 0, 17);
-    }
-  
-    .dropdown-submenu {
-      position: relative;
-    }
-  
-    .dropdown-submenu .dropdown-menu {
-      top: 0;
-      left: 100%;
-      margin-left: 0.1rem;
-    }
-  }
-
-  .dropdown-menu {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    /* Let JS control visibility */
-    position: absolute; /* Needed for correct dropdown placement */
-  }
-  
-  .dropdown:hover .dropdown-menu,
-  .dropdown-menu.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .fade-in {
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  </style>
+ <link rel="stylesheet" href="./css/style.css">
    <!-- Spinner Start -->
    <div id="spinner"
    class="show bg-ever-green position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -599,12 +193,48 @@
                    </ul>
                </div>
 
-               <a href="academic.html" class="nav-item nav-link">Academic</a>
-               <a href="directirate.html" class="nav-item nav-link">Directorates</a>
-               <a href="facilities.html" class="nav-item nav-link">Facilities</a>
-           </div>
-       </div>
-   </nav>
+               <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="academicDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Academics
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="academicDropdown">
+                    <!-- Faculties & Institutes (opens left) -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle" href="#">Faculties & Institutes</a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a class="dropdown-item" href="./faculty/faculty-fba.html">Faculty of Business Administration (FBA)</a></li>
+                            <li><a class="dropdown-item" href="./faculty/faculty-fls.html">Faculty of Law and Shariah (FLS)</a></li>
+                            <li><a class="dropdown-item" href="./faculty/faculty-fass.html">Faculty of Arts and Social Sciences (FASS)</a></li>
+                            <li><a class="dropdown-item" href="./faculty/faculty-foe.html">Faculty of Engineering (FOE)</a></li>
+                            <li><a class="dropdown-item" href="./faculty/faculty-fohas.html">Faculty of Health and Allied Sciences (FOHAS)</a></li>
+                            <li><a class="dropdown-item" href="./faculty/faculty-fos.html">Faculty of Science (FOS)</a></li>
+                            <li><a class="dropdown-item" href="./faculty/institute-ipgrs.html">Institute of Postgraduate Studies and Research (IPGSR)</a></li>
+                            <li><a class="dropdown-item" href="./faculty/institute-iibf.html">Institute of Islamic Banking and Finance (IIBF)</a></li>
+                            <li><a class="dropdown-item" href="./faculty/institute-ice.html">Institute of Continuing Education (ICE)</a></li>
+                        </ul>
+                    </li>
+            
+                    <!-- Research & Publications (optional, still right-side) -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle" href="publication.html">Research &amp; Publications</a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a class="dropdown-item" href="publication.html">Our Researcher's Publications</a></li>
+                            <li><a class="dropdown-item" href="repository.html">Repository</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a class="dropdown-item" href="#">Transfers</a></li>
+                    <li><a class="dropdown-item" href="#">Others</a></li>
+                </ul>
+            </div>
+            
+
+            <a href="directirate.html" class="nav-item nav-link">Directorates</a>
+            <a href="facilities.html" class="nav-item nav-link">Facilities</a>
+        </div>
+    </div>
+</nav>
 </div>
 
 
@@ -628,6 +258,7 @@
             
             <li>Access to Studies and Examination is only granted to students who have paid thier allocated installments accordingly.</li>
         </ol>
+        <i>Please click below steps to see instructions</i>
       </p>
     </div>
 
@@ -657,7 +288,7 @@
         <div class="payment-methods">
           <div class="sub-step" id="pay-pbz">💰 Pay Using PBZ Bank</div>
           <div class="sub-step" id="pay-airtel">📱 Pay Using Airtel Money</div>
-          <div class="sub-step" id="pay-tigo">📞 Pay Using Tigo Pesa</div>
+          <div class="sub-step" id="pay-tigo">📞 Pay Using Tigo Pesa / Mix by Yass</div>
         </div>
         <div class="popup-message" id="payment-message" style="display: none;"></div>
       </div>
