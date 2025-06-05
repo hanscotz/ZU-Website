@@ -191,6 +191,15 @@
   padding: 100px 0 60px 0;
 }
 
+.bg-breadcrumb7 {
+  background: url(../img/procurement2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 100px 0 60px 0;
+}
+
 /*** Counter Facts ***/
 .counter-facts {
     background: linear-gradient(rgba(40, 167, 69, 0.9), rgba(40, 167, 69, 0.8)), url(../img/zu.jpg);
