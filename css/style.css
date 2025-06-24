@@ -214,6 +214,36 @@
   z-index: 0;
 }
 
+.bg-breadcrumb11 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 60px 0;
+  background: url('../img/FOHAS.jpg') no-repeat center center / cover;
+  /* filter: blur(2px); */
+  z-index: 0;
+}
+
+.bg-breadcrumb12 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 60px 0;
+  background: url('../img/fos.jpg') no-repeat center center / cover;
+  /* filter: blur(2px); */
+  z-index: 0;
+}
+
+
+.bg-breadcrumb13 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 60px 0;
+  background: url('../img/IBF.jpg') no-repeat center center / cover;
+  /* filter: blur(2px); */
+  z-index: 0;
+}
 
 /*** Counter Facts ***/
 .counter-facts {
