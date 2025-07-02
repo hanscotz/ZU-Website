@@ -254,6 +254,26 @@
   /* filter: blur(2px); */
   z-index: 0;
 }
+
+.bg-breadcrumb15 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 60px 0;
+  background: url('../img/library.jpg') no-repeat center center / cover;
+  /* filter: blur(2px); */
+  z-index: 0;
+}
+
+.bg-breadcrumb16 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 60px 0;
+  background: url('../img/ict.jpg') no-repeat center center / cover;
+  /* filter: blur(2px); */
+  z-index: 0;
+}
 /*** Counter Facts ***/
 .counter-facts {
     background: linear-gradient(rgba(40, 167, 69, 0.9), rgba(40, 167, 69, 0.8)), url(../img/zu.jpg);
